@@ -51,6 +51,7 @@
 #include "rocjitsu/isa/arch/amdgpu/shared/scalar_operand_selectors.h"
 #include "rocjitsu/isa/decoder.h"
 #include "rocjitsu/isa/instruction.h"
+#include "rocjitsu/vm/amdgpu/command_processor.h"
 #include "rocjitsu/vm/amdgpu/compute_unit.h"
 #include "rocjitsu/vm/amdgpu/gpu_memory.h"
 #include "rocjitsu/vm/amdgpu/hwreg.h"
@@ -8869,6 +8870,94 @@ TEST(HwregTest, GetregReadsModeAndStatusTargetIds) {
   }
 }
 
+TEST(HwregTest, CdnaLocationReadsUseBackedTopologyFields) {
+  for (const HwregArchCase &arch_case : kHwregArchCases) {
+    if (arch_case.arch != ROCJITSU_CODE_ARCH_CDNA3 && arch_case.arch != ROCJITSU_CODE_ARCH_CDNA4)
+      continue;
+    SCOPED_TRACE(arch_case.name);
+    amdgpu::GpuMemory memory("identity_mem");
+    amdgpu::L2Cache l2("identity_l2");
+    amdgpu::CommandProcessor cp("identity_cp");
+    amdgpu::ComputeUnitCore::Config cfg{};
+    cfg.arch = arch_case.arch;
+    cfg.num_wf_slots = 32;
+    cfg.sgprs_per_wf = 104;
+    cfg.vgprs_per_wf = 256;
+    cfg.lds_size_kb = 64;
+    auto cu = amdgpu::ComputeUnitCore::create("identity_cu", cfg, &memory, &l2);
+    ASSERT_NE(cu, nullptr);
+    auto *wf = cu->dispatch_wf_at(29, 0, 0, cfg.sgprs_per_wf, cfg.vgprs_per_wf);
+    ASSERT_NE(wf, nullptr);
+    uint32_t value = UINT32_MAX;
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(20, 0, 4), value),
+              amdgpu::HwregAccessResult::Unsupported);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 8, 8), value),
+              amdgpu::HwregAccessResult::Unsupported);
+    cu->set_command_processor(&cp);
+    // A CP without assigned topology must not imply physical XCC zero.
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(20), value),
+              amdgpu::HwregAccessResult::Unsupported);
+    EXPECT_EQ(value, 0u);
+    std::vector<std::unique_ptr<amdgpu::CommandProcessor>> peer_owners;
+    std::vector<amdgpu::CommandProcessor *> peers;
+    for (uint32_t rank = 0; rank < 7; ++rank) {
+      peer_owners.push_back(
+          std::make_unique<amdgpu::CommandProcessor>("peer" + std::to_string(rank)));
+      peers.push_back(peer_owners.back().get());
+    }
+    peers.push_back(&cp);
+    cp.set_xcd_topology(7, peers);
+    // Scratch addressing may differ without changing the physical XCC identity.
+    cp.set_scratch_xcc_layout_for_test(0, 8);
+    cu->set_shader_engine_location(3, 9, 10, 10);
+    auto decoder = Decoder::create(cfg.arch);
+    ASSERT_NE(decoder, nullptr);
+    for (const auto &[field, expected] :
+         std::array<std::pair<uint16_t, uint32_t>, 9>{{{encode_hwreg(4, 0, 4), 7},
+                                                       {encode_hwreg(4, 4, 2), 1},
+                                                       {encode_hwreg(4, 0, 6), 0x17},
+                                                       {encode_hwreg(4, 8, 8), 0x69},
+                                                       {encode_hwreg(4, 12, 1), 0},
+                                                       {encode_hwreg(20, 0, 4), 7},
+                                                       {encode_hwreg(20), 7},
+                                                       {encode_hwreg(20, 4, 28), 0},
+                                                       {encode_hwreg(20, 1, 2), 3}}}) {
+      const auto words = encode_sopk(arch_case.getreg_op, 4, field);
+      std::unique_ptr<Instruction> inst(decode_valid(*decoder, words.data()));
+      ASSERT_NE(inst, nullptr);
+      ASSERT_TRUE(cu->execute_instruction(inst.get(), *wf).succeeded());
+      EXPECT_EQ(cu->read_sgpr(wf->sgpr_alloc().base + 4), expected);
+      EXPECT_EQ(amdgpu::write_hwreg_field(*wf, field, 0), amdgpu::HwregAccessResult::ReadOnly);
+    }
+    for (auto field : {encode_hwreg(4), encode_hwreg(4, 6, 1), encode_hwreg(4, 16, 4)})
+      EXPECT_EQ(amdgpu::read_hwreg_field(*wf, field, value),
+                amdgpu::HwregAccessResult::Unsupported);
+    cu->set_shader_engine_location(8, 9, 10, 10);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 8, 8), value),
+              amdgpu::HwregAccessResult::Unsupported);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 8, 4), value),
+              amdgpu::HwregAccessResult::Success);
+    EXPECT_EQ(value, 9u);
+    cu->set_shader_engine_location(3, 9, 0);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 13, 3), value),
+              amdgpu::HwregAccessResult::Success);
+    EXPECT_EQ(value, 3u);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 12, 1), value),
+              amdgpu::HwregAccessResult::Success);
+    EXPECT_EQ(value, 0u);
+    cu->set_shader_engine_location(3, 9, 8, 16);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 8, 4), value),
+              amdgpu::HwregAccessResult::Unsupported);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(4, 13, 3), value),
+              amdgpu::HwregAccessResult::Success);
+    EXPECT_EQ(value, 3u);
+    cu->set_command_processor(nullptr);
+    EXPECT_EQ(amdgpu::read_hwreg_field(*wf, encode_hwreg(20, 0, 4), value),
+              amdgpu::HwregAccessResult::Unsupported);
+    wf->halt();
+  }
+}
+
 TEST(HwregTest, CdnaSimdIdsFollowResidentWaveSlots) {
   for (const HwregArchCase &arch_case : kHwregArchCases) {
     if (arch_case.arch != ROCJITSU_CODE_ARCH_CDNA2 && arch_case.arch != ROCJITSU_CODE_ARCH_CDNA3 &&
@@ -8921,9 +9010,16 @@ TEST(HwregTest, CdnaSimdIdsFollowResidentWaveSlots) {
         EXPECT_EQ(cu->read_sgpr(wf->sgpr_alloc().base + 4), expected);
       }
 
-      for (const auto field :
-           {encode_hwreg(4), encode_hwreg(4, 0, 4), encode_hwreg(4, 3, 2), encode_hwreg(4, 5, 2),
-            encode_hwreg(4, 6, 1), encode_hwreg(4, 31, 32), encode_hwreg(63, 4, 1)}) {
+      if (arch_case.arch == ROCJITSU_CODE_ARCH_CDNA2) {
+        for (const auto field : {encode_hwreg(4, 0, 4), encode_hwreg(4, 3, 2)}) {
+          value = UINT32_MAX;
+          EXPECT_EQ(amdgpu::read_hwreg_field(*wf, field, value),
+                    amdgpu::HwregAccessResult::Unsupported);
+          EXPECT_EQ(value, 0u);
+        }
+      }
+      for (const auto field : {encode_hwreg(4), encode_hwreg(4, 5, 2), encode_hwreg(4, 6, 1),
+                               encode_hwreg(4, 31, 32), encode_hwreg(63, 4, 1)}) {
         value = UINT32_MAX;
         EXPECT_EQ(amdgpu::read_hwreg_field(*wf, field, value),
                   amdgpu::HwregAccessResult::Unsupported);
