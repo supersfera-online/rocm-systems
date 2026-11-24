@@ -1344,7 +1344,7 @@ class AMDSMILogger:
             print(_TBL("| OS kernel Version: {0:<{w}s} |").format(kernel_version, w=_COL_WIDTH))
 
         if amdgpu_package != "N/A":
-            print("| amdgpu Package:    {0:<{w}s} |".format(amdgpu_package, w=_COL_WIDTH))
+            print(_TBL("| amdgpu Package:    {0:<{w}s} |").format(amdgpu_package, w=_COL_WIDTH))
 
         if rocm_version != "N/A":
             print(_TBL("| ROCm Version:      {0:<{w}s} |").format(rocm_version, w=_COL_WIDTH))

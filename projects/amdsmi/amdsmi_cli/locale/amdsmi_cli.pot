@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amd-smi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 18:45+00:00\n"
+"POT-Creation-Date: 2026-11-24 19:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,1996 +21,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: amdsmi_cli/amdsmi_init.py:51 amdsmi_cli/amdsmi_cli.py:63
+#: amdsmi_cli/BDF.py:45
 #, python-brace-format
-msgid "Unhandled import error: {e}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_init.py:54
-msgid ""
-"Failed to import the amdsmi Python library. Install amd-smi-lib (rpm/deb) or "
-"pip install the amdsmi wheel."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_init.py:196
-#, python-format
-msgid "amdsmi_init() timed out after %ds. The GPU driver may be unresponsive."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_init.py:212 amdsmi_cli/amdsmi_init.py:223
-msgid "Drivers not loaded (amdgpu, amd_hsmp drivers not found in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_init.py:242
-msgid "Unable to cleanly shut down amd-smi-lib"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_init.py:252
-#, python-format
-msgid "Unable to cleanly shut down amd-smi-lib, exception: %s"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:286
-#, python-brace-format
-msgid ""
-"Note: {label} {devices}: {driver} driver not loaded (sudo modprobe {driver})"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:339 amdsmi_cli/amdsmi_helpers.py:392
-msgid ""
-"Unable to get device choices, driver not initialized (amd_hsmp  or hsmp_acpi "
-"not found in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:347
-msgid ""
-"Unable to find any devices, check if driver is initialized (amd_hsmp or "
-"hsmp_acpi not found in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:400
-msgid ""
-"Unable to find any devices, check if driver is initialized (amd_hsmp or "
-"hsmp_acpi  not found in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:525
-msgid ""
-"Unable to get device choices, driver not initialized (amdgpu not found in "
-"modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:534
-msgid ""
-"Unable to find any devices, check if driver is initialized (amdgpu not found "
-"in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:596
-msgid ""
-"Unable to get device choices, driver not initialized (IONIC_NIC, RDMA_NIC "
-"not found in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:605
-msgid ""
-"Unable to find any devices, check if driver is initialized (IONIC_NIC, "
-"RDMA_NIC not found in modules)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:1323
-msgid "'CTRL' + 'C' to stop watching output:"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:1359
-msgid "Unable to find gpu ID from device_handle"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:1375
-msgid "Unable to find nic ID from device_handle"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:1390
-msgid "Unable to find cpu ID from device_handle"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:1404
-msgid "Unable to find core ID from device_handle"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:2045
-msgid ""
-"\n"
-"            ******WARNING******\n"
-"\n"
-"            Operating your AMD GPU outside of official AMD specifications or "
-"outside of\n"
-"            factory settings, including but not limited to the conducting of "
-"overclocking,\n"
-"            over-volting or under-volting (including use of this interface "
-"software,\n"
-"            even if such software has been directly or indirectly provided "
-"by AMD or otherwise\n"
-"            affiliated in any way with AMD), may cause damage to your AMD "
-"GPU, system components\n"
-"            and/or result in system failure, as well as cause other "
-"problems.\n"
-"            DAMAGES CAUSED BY USE OF YOUR AMD GPU OUTSIDE OF OFFICIAL AMD "
-"SPECIFICATIONS OR\n"
-"            OUTSIDE OF FACTORY SETTINGS ARE NOT COVERED UNDER ANY AMD "
-"PRODUCT WARRANTY AND\n"
-"            MAY NOT BE COVERED BY YOUR BOARD OR SYSTEM MANUFACTURER'S "
-"WARRANTY.\n"
-"            Please use this utility with caution.\n"
-"            "
-msgstr ""
-
-#. Prompt: keep the [y/n] answer letters unchanged (answers are parsed in English).
-#: amdsmi_cli/amdsmi_helpers.py:2059
-msgid "Do you accept these terms? [y/n] "
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:2063 amdsmi_cli/amdsmi_helpers.py:2105
-#: amdsmi_cli/amdsmi_parser.py:881
-msgid "Confirmation not given. Exiting without setting value"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:2073
-msgid ""
-"\n"
-"            ******WARNING******\n"
-"\n"
-"            After changing memory (NPS) partition modes, users MUST restart\n"
-"            (reload) the AMD GPU driver. Use modprobe to reload the driver:\n"
-"\n"
-"                sudo modprobe -r amdgpu\n"
-"                sudo modprobe amdgpu\n"
-"\n"
-"            This change is intended to allow users the ability to control "
-"when is\n"
-"            the best time to restart the AMD GPU driver, as it may not be "
-"desired\n"
-"            to restart the AMD GPU driver immediately after changing the\n"
-"            memory (NPS) partition mode.\n"
-"\n"
-"            Please reload the AMD GPU driver AFTER successfully\n"
-"            changing the memory (NPS) partition mode. A successful driver "
-"reload\n"
-"            is REQUIRED in order to complete updating ALL GPUs in the hive "
-"to\n"
-"            the requested partition mode.\n"
-"\n"
-"            A requested mode stays pending until the next driver reload.\n"
-"            Requesting the current mode cancels a pending mode.\n"
-"\n"
-"            ******REMINDER******\n"
-"            In order to reload the AMD GPU driver, users MUST quit all GPU\n"
-"            workloads across all devices.\n"
-"            "
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:2100
-msgid "Do you accept these terms? [Y/N] "
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_helpers.py:3047
-msgid "Error opening CPER file. Unable to read CPER File"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_helpers.py:3113
-msgid "Fabric CPER entries exceed internal buffer capacity"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_helpers.py:3147
-msgid "Error accessing CPER files. This command requires CPER to be enabled."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3586
-#, python-brace-format
-msgid ""
-"Unable to set {power_type_key} power cap to {requested_power_cap}W. Power "
-"cap must be between {min_power_cap}W and {max_power_cap}W"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_helpers.py:3662
-msgid "No node handle available; cannot set balancing mode"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3699
-#, python-brace-format
-msgid "Successfully set NPM balancing mode to {requested_mode}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3713
-#, python-brace-format
-msgid ""
-"BALANCING_MODE: [{get_error_info}] {requested_mode} is not supported on this "
-"platform"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3719
-msgid ""
-"NPM balancing mode is not supported on this node; cannot set balancing mode"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_helpers.py:3780
-msgid "Node power limit cannot be set: NPM is disabled on this node"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3792
-msgid "Node power limit cannot be validated: platform maximum is unavailable"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3802
-#, python-brace-format
-msgid "Node power limit must be between 1W and {max_node_power_limit}W"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3844
-msgid "Reboot required for changes to take effect. Please reboot manually."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3847
-msgid "Would you like to reboot the system now? (y/n): "
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3866
-msgid "D-Bus reboot failed, falling back to systemctl..."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_helpers.py:3877
-msgid "Failed to initiate reboot. Please reboot manually."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:552 amdsmi_cli/amdsmi_logger.py:573
-#: amdsmi_cli/amdsmi_logger.py:594 amdsmi_cli/amdsmi_logger.py:615
-#: amdsmi_cli/amdsmi_logger.py:741
-msgid "Invalid output format: expected json, csv, or human_readable"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:660
-msgid "No AI NICs found"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1333
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| AMD-SMI            {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1337
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| amdgpu Version:    {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1339
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| OS kernel Version: {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1342
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| ROCm Version:      {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1346
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| VBIOS Version:     {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1348
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| FW PLDM:           {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1351
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid "| Platform:          {0:<{w}s} |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1357
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid ""
-"| BDF                        GPU-Name | Mem-Uti   Temp   UEC       Power-"
-"Usage |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1360
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid ""
-"| GPU  HIP-ID  OAM-ID  Partition-Mode | GFX-Uti    Fan               Mem-"
-"Usage |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1446
-#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
-msgctxt "table"
-msgid ""
-"| "
-"Processes:                                                                   "
-"|"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1459
-msgid ""
-"|  No running processes "
-"found                                                  |"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_logger.py:1464
-msgid "Process Name may require elevated permissions."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:234
-#, python-brace-format
-msgid ""
-"AMD System Management Interface | {version_string} | {rocm_version_string} | "
-"{platform_string}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:245
-msgid "For detailed help on specific commands: amd-smi [command] -h"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:254
-msgid "Display GPU information in ROCm-SMI compatible format"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:259
-#, python-brace-format
-msgid "Set the logging level from the possible choices: {join}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:275
-msgid "AMD-SMI Commands"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:277
-msgid "Descriptions:"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:475 amdsmi_cli/amdsmi_parser.py:1531
-#, python-brace-format
-msgid ""
-"Profile name cannot be empty or exceed {AMDSMI_MAX_STRING_LENGTH} bytes."
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:511 amdsmi_cli/amdsmi_parser.py:518
-#: amdsmi_cli/amdsmi_parser.py:561
-#, python-brace-format
-msgid "Valid options are: {join}."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:570
-#, python-brace-format
-msgid ""
-"\n"
-"--clk-level requires at least one performance level index (e.g. --clk-level "
-"{clk_type} 0 1)"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:643
-msgid "Missing MODE argument"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:650
-#, python-brace-format
-msgid "Invalid MODE {mode}, must be 0-5"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:675
-#, python-brace-format
-msgid ""
-"Mode {mode} requires MODE UTIL PPT_LIMIT for CPU family 0x{cpu_family:X} "
-"model 0x{cpu_model:X} (got {num_values} args)"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:689
-#, python-brace-format
-msgid "UTIL must be 0-100, got {util}"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:700
-msgid "PPT_LIMIT Out of range"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:708
-#, python-brace-format
-msgid ""
-"Mode {mode} requires only MODE argument for this CPU (got {num_values} "
-"args). UTIL and PPT_LIMIT not supported."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:720
-#, python-brace-format
-msgid "Mode {mode} requires only MODE argument (got {num_values} args)"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:742
-msgid "Missing TYPE argument"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:752
-#, python-brace-format
-msgid "Invalid TYPE {rail_type}, must be 0 (HottestRail) or 1 (IndividualRail)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:764
-#, python-brace-format
-msgid ""
-"TYPE 0 (HottestRail) requires exactly 1 argument (TYPE only), got "
-"{num_values} arguments: {values}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:776
-#, python-brace-format
-msgid ""
-"TYPE 1 (IndividualRail) requires exactly 2 arguments (TYPE RAIL_INDEX), got "
-"{num_values} arguments: {values}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:789
-#, python-brace-format
-msgid ""
-"Invalid RAIL_INDEX {rail_index}, must be 0-4 (0=VDDCR_CPU0, 1=VDDCR_CPU1, "
-"2=VDDCR_SOC, 3=VDDIO, 4=VDDIO_MEM_S3)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:866
-#, python-brace-format
-msgid ""
-"File '{path}' exists and stdin is not a TTY; cannot prompt to overwrite or "
-"append. Re-run with --overwrite or --append."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:895
-msgid "User declined to overwrite or append existing file."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:922
-#, python-brace-format
-msgid "CPER file could not be read. Make sure the path '{path}' is correct."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:928
-#, python-brace-format
-msgid ""
-"Invalid Path: {path} is a directory when it needs to be a specific file."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:934
-#, python-brace-format
-msgid "Invalid Path: {path} Input file is empty."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:940
-#, python-brace-format
-msgid ""
-"Invalid Path: {path} Could not determine if the value given is a valid path."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1127 amdsmi_cli/amdsmi_parser.py:1162
-msgid "Reprint the command in a loop of INTERVAL seconds"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1128
-msgid "The total TIME to watch the given command"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1129
-msgid "Total number of ITERATIONS to loop on the given command"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1163
-msgid "The total duration of TIME to watch the command"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1164
-msgid "The total number of ITERATIONS to repeat the command"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1166
-msgid "Watch Arguments"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:1491
-msgid "Missing PROFILE_NAME argument"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1508
-msgid "'@<path>' must be the only argument when loading profiles from a file."
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:1517
-msgid "File path cannot be empty after '@'."
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:1539
-msgid "Missing at least one KEY=VALUE field argument for --ampp-configure"
-msgstr ""
-
-#. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/amdsmi_parser.py:1550
-msgid "Fields must be given as KEY=VALUE (e.g. PPT0_Limit=300)."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1564
-#, python-brace-format
-msgid ""
-"Field name cannot be empty or exceed {AMDSMI_MAX_STRING_LENGTH} bytes in "
-"KEY=VALUE."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1575
-#, python-brace-format
-msgid "Field value must be an integer within int64 range (got '{raw_value}')."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1668
-#, python-brace-format
-msgid ""
-"Select a GPU ID, BDF, or UUID from the possible choices:\n"
-"{gpu_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1671
-msgid ""
-"Gets general information about the specified VF (timeslice, fb info, …).                    \n"
-"Available only on virtualization OSs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1674
-#, python-brace-format
-msgid ""
-"Select a CPU ID from the possible choices:\n"
-"{cpu_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1677
-#, python-brace-format
-msgid ""
-"Select a NIC ID from the possible choices:\n"
-"{nic_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1680
-#, python-brace-format
-msgid ""
-"Select a Core ID from the possible choices:\n"
-"{core_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1685
-msgid "Device Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1704 amdsmi_cli/amdsmi_parser.py:1866
-msgid "Static Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1721
-#, python-brace-format
-msgid ""
-"Select a NIC ID, BDF, or UUID from the possible choices; a bare --nic "
-"selects every NIC:\n"
-"{nic_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1729
-msgid "Displays output in JSON format"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1730
-msgid "Displays output in CSV format"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1731
-msgid "Saves output into a file on the provided path"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1735
-#, python-brace-format
-msgid ""
-"Set the logging level from the possible choices:\n"
-"    {loglevel_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1738
-msgid "Command Modifiers"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1753
-msgid "Overwrite the file"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1756
-msgid "Append to the file"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1784
-msgid "Display version information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1799
-msgid "Display the current amdgpu driver version"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1800
-msgid "Display the current amd_hsmp or hsmp_acpi driver version"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1801
-msgid "Display the current nic driver version"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1835
-msgid "List GPU information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1836
-msgid "List Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1838
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"Lists all detected devices on the system.                            \n"
-"Lists the BDF, UUID, KFD_ID, NODE_ID, and Partition ID for each GPU and/or "
-"CPUs.                            \n"
-"In virtualization environments, it can also list VFs associated to "
-"each                            \n"
-"GPU with some basic information for each VF."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1841
-msgid ""
-"Enumeration mapping to other features.                            \n"
-"    Includes CARD, RENDER, HSA_ID, HIP_ID, HIP_UUID, OAM_ID, and "
-"PHYSICAL_ACC_ID"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1862
-msgid "Gets static information about the specified GPU"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1864
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns static information for all GPUs on the "
-"system.                                \n"
-"If no static argument is provided, all static information will be displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1869
-msgid "All asic information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1870
-msgid "All bus information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1871
-msgid "All video bios/IFWI information (if available)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1872
-msgid "All limit metric values (i.e. power and thermal limits)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1873
-msgid "Displays driver version"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1874
-msgid "All vram information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1875
-msgid "All cache information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1876
-msgid "All board information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1877
-msgid "The available soc pstate policy"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1878
-msgid "The available XGMI per-link power down policy"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1879
-msgid "The process isolation status"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1881
-msgid ""
-"Component Unified ID: the derived CUID, its component type, whether it is a\n"
-"temporary (auxiliary) identifier, and which layer answered.\n"
-"Not part of the default `amd-smi static` output; ask for it.\n"
-"The primary CUID is not shown by default either: its payload embeds the raw\n"
-"serial number. Add --cuid-primary, as root, to include it."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1888
-msgid ""
-"Include the primary CUID in the CUID output, implying --cuid. Requires\n"
-"privilege, and prints a value that embeds the device serial number. Do not\n"
-"paste it into a bug report."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1892
-msgid "Display current and available power profiles"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1897
-#, python-brace-format
-msgid ""
-"Show one or more valid clock frequency levels. Available options:\n"
-"\t{clk_option_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1903
-msgid ""
-"Displays RAS features information;\n"
-"\tSudo may be required for some features"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1905
-msgid "All numa node information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1907
-msgid ""
-"Partition information:\n"
-"\tNo longer available in default output.\n"
-"\tArgument is required to display.\n"
-"\tEx. `amd-smi static -p` or use\n"
-"\t`amd-smi partition -c -m`/`sudo amd-smi partition -a`"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1914
-msgid "All DFC FW table information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1915
-msgid "Displays Frame Buffer information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1916
-msgid "Displays number of supported and enabled VFs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1919
-msgid "All SMU FW information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1920
-msgid "Displays hsmp interface version"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:1995
-msgid ""
-"Display VRAM carveout memory options and current setting.\n"
-"\tOnly supported on some APUs."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2003
-msgid ""
-"Display AMPP (amdsmi power profile) recipe table: per-profile version/active/"
-"writable/configured state and per-field name/unit/value/min/max."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2034
-msgid ""
-"Power Stabilization status (HAWK dummy-compute insertion and Ramp Management)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2058 amdsmi_cli/amdsmi_parser.py:2451
-#: amdsmi_cli/amdsmi_parser.py:3309
-msgid "CPU Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2076
-msgid "Gets firmware information about the specified GPU or NIC"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2078
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, return firmware information for all GPUs on the "
-"system."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2080
-msgid "Firmware Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2083
-msgid "All FW list information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2084
-msgid "All error records information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2130
-msgid "Gets bad page information about the specified GPU"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2132
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, return bad page information for all GPUs on the "
-"system."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2134
-msgid "Bad Pages Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2137
-msgid "Displays all pending retired pages"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2138
-msgid "Displays retired pages"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2139
-msgid "Displays unreservable pages"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2140
-msgid "Displays page addresses and sizes in hexadecimal format"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2196
-msgid "Gets metric/performance information about the specified GPU or NIC"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2198
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns metric information for all GPUs on the "
-"system.                                \n"
-"If no metric argument is provided, all metric information will be displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2201
-msgid "Metric arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2204
-msgid "Displays engine usage information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2207
-msgid "Memory usage per block"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2210
-msgid "Current power usage"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2211
-msgid "Average, max, and current clock frequencies"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2212
-msgid "Current temperatures"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2213
-msgid "Total number of ECC errors"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2214
-msgid "Number of ECC errors per block"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2215
-msgid "Current PCIe speed, width, and replay count"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2216
-msgid "GPU voltage"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2217
-msgid "base_board temperatures"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2218
-msgid "gpu_board temperatures"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2221
-msgid "Current fan speed"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2222
-msgid "Display voltage curve"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2223
-msgid "Current GFX and MEM clock overdrive level"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2224
-msgid "Current DPM performance level"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2225
-msgid "XGMI error information since last read"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2226
-msgid "Amount of energy consumed"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2228
-msgid ""
-"Displays throttle accumulators;\n"
-"    Only available for MI300 or newer ASICs and APUs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2231
-msgid ""
-"Switch temperature, clock, and usage to partition-scoped\n"
-"    (XCP/AID/MID) data sources; combine with those flags to scope it;\n"
-"    Only available for MI300 or newer ASICs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2236
-msgid ""
-"Print every field, including the ones the GPU's gpu_metrics\n"
-"    table version cannot carry and which are omitted by default;\n"
-"    affects human-readable output only, since --json and --csv\n"
-"    always print every field"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2243
-msgid "All scheduling information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2244
-msgid "All guard information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2245
-msgid "All guest data information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2246
-msgid "Displays total and used Frame Buffer usage information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2247
-msgid "Table of current XGMI metrics information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2250
-msgid "CPU power metrics"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2251
-msgid "Displays prochot status"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2252
-msgid "Displays currentFclkMemclk frequencies and cclk frequency limit"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2253
-msgid "Displays C0 residency"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2255
-msgid "Displays lclk dpm level range. Requires socket ID and NBOID as inputs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2258
-msgid ""
-"Displays current power efficiency mode.        \n"
-" For Family 1Ah Models 50h-57h onwards and MODE= 4 or 5, displays "
-"utilization percentage and PPT limit in Watts."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2261
-msgid "Displays svi based telemetry for all rails"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2263
-msgid ""
-"Displays current IO bandwidth for the selected CPU.        \n"
-" input parameters are bandwidth type(1) and link ID encodings        \n"
-" i.e. P2, P3, G0 - G7"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2268
-msgid ""
-"Displays current XGMI bandwidth for the selected CPU        \n"
-" input parameters are bandwidth type(1,2,4) and link ID encodings        \n"
-" i.e. P2, P3, G0 - G7"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2272
-msgid "Displays metrics table version"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2273
-msgid "Displays metric table"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2274
-msgid "Displays socket energy for the selected CPU socket"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2276
-msgid ""
-"Displays per socket max ddr bw, current utilized bw,        \n"
-" and current utilized ddr bw in percentage"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2279
-msgid "Displays cpu socket temperature"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2280
-msgid "Displays dimm temperature range and refresh rate"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2281
-msgid "Displays dimm power consumption"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2282
-msgid "Displays dimm thermal sensor"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2284
-msgid "Displays XGMI pstate range, min and max values for the selected CPU"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2286
-msgid "Displays CPU ISO frequency policy"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2287
-msgid "Displays DFCState control status"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2288
-msgid "Displays PC6 enable control"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2289
-msgid "Displays CC6 enable control"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2291
-msgid ""
-"Read DIMM sideband register.Requires DIMM_ADDR, LID(0x2->TS0,0x6->TS1,0x9-"
-">PMIC0,0xA->SPDHub)        \n"
-" REG_OFFSET (hex), REG_SPACE (REGSPACE:0->Volatile,1->NVM)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2295
-msgid "Displays CPU thermal delta (TDELTA) value for the selected CPU socket"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2298
-msgid ""
-"Get SVI3 VR controller temperature. TYPE: 0=HottestRail, 1=IndividualRail, "
-"RAIL_INDEX:        \n"
-" (RAIL_INDEX:0->VDDCR_CPU0,1->VDDCR_CPU1,2->VDDCR_SOC,3->VDDIO,4-"
-">VDDIO_MEM_S3) must be, specified if TYPE is 1"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2302
-msgid ""
-"Displays HSMP enabled commands bit masks (Read/Write "
-"EnabledCommandsBitMask0-2)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2304
-msgid "Displays CPU SDPS limit for the selected CPU socket in Watts"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2307
-msgid "Displays core energy for the selected core"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2308
-msgid "Get boost limit for the selected cores"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2309
-msgid "Get Current CCLK limit set per Core"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2310
-msgid "Displays ccd power consumption for the selected core"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2311
-msgid "Displays floor limit frequency for the selected core in MHz"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2313
-msgid "Displays effective floor limit frequency for the selected core in MHz"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2611 amdsmi_cli/amdsmi_parser.py:3483
-msgid "CPU Core Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2645
-msgid ""
-"Show per-port statistics for the selected NIC.\n"
-"    Bare --port shows all ports; --port <idx> shows one port."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2648
-msgid "Show the extended vendor statistics set. Requires --port."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2650
-msgid ""
-"Show RDMA hardware counters per RDMA port for the selected NIC.\n"
-"    Bare --rdma shows all RDMA ports; --rdma <idx> shows one port.\n"
-"    The index counts the NIC's RDMA ports from 0, across its RDMA devices.\n"
-"    List the ports with 'static --nic'; it numbers them per device."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2656
-msgid ""
-"Show every hwmon sensor of the selected NIC with its thresholds\n"
-"    (temperature, voltage and power), like the sensors command."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2660
-msgid "NIC Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2709
-msgid "Lists compute process information running on the specified GPU"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2711
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns information for all GPUs on the "
-"system.                                \n"
-"If no process argument is provided, all process information will be "
-"displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2713
-msgid "Process arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2716
-msgid "pid, process name, memory usage"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2717
-msgid "All engine usages"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2719
-msgid ""
-"Gets compute process GPU information about the specified process based on "
-"Process ID"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2722
-msgid ""
-"Gets compute process GPU information about the specified process based on "
-"Process Name.                    \n"
-"If multiple processes have the same name, information is returned for all of "
-"them.                    \n"
-"Process Name may require elevated permissions."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2763
-msgid "Group process output by PID instead of GPU."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2777
-msgid "Displays information about all profiles and current profile"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2779
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns information for all GPUs on the system."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2781
-msgid "Profile Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2801
-msgid "Displays event information for the given GPU"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2803
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns event information for all GPUs on the system."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2805
-msgid "Event Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2825
-msgid "Displays topology information of the devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2827
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns information for all GPUs on the "
-"system.                                \n"
-"If no topology argument is provided, all topology information will be "
-"displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2829
-msgid "Topology arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2832
-msgid "Displays link accessibility between GPUs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2833
-msgid "Displays relative weight between GPUs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2834
-msgid "Displays the number of hops between GPUs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2835
-msgid "Displays the link type between GPUs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2836
-msgid "Display max and min bandwidth between nodes"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2837
-msgid "Display cache coherent (or non-coherent) link capability between nodes"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2838
-msgid "Display 32 and 64-bit atomic io link capability between nodes"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2839
-msgid "Display P2P direct memory access (DMA) link capability between nodes"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2840
-msgid "Display P2P bi-directional link capability between nodes"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2889
-msgid "Set options for devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2891
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, will select all GPUs on the "
-"system.                                    \n"
-"A set argument must be provided; Multiple set arguments are "
-"accepted.                                    \n"
-"Requires 'sudo' privileges."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2893
-msgid "Set Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2902
-#, python-brace-format
-msgid "Set GPU fan speed :{fan_support}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2907
-#, python-brace-format
-msgid "Set GPU fan speed ({fan_support})"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2912
-#, python-brace-format
-msgid ""
-"Set one of the following performance levels:\n"
-"\t{perf_level_help_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2916
-#, python-brace-format
-msgid ""
-"Set power profile level (#) or choose one of available profiles:\n"
-"\t{power_profile_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2919
-msgid ""
-"Enable performance determinism mode and set GFXCLK softmax limit (in MHz)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2925
-#, python-brace-format
-msgid ""
-"Set one of the following accelerator TYPE or profile INDEX:\n"
-"\t{accelerator_set_choices_str}.\n"
-"\tUse `sudo amd-smi partition --accelerator` to find acceptable values."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2929
-#, python-brace-format
-msgid ""
-"Set one of the following memory partition modes:\n"
-"\t{memory_partition_choices_str}\n"
-"\tThe mode applies at the next driver reload.\n"
-"\tSetting the current mode cancels a pending change."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2933
-#, python-brace-format
-msgid ""
-"Set the GPU soc pstate policy using policy id, an integer. Valid id's "
-"include:\n"
-"\t{soc_pstate_help_info}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2937
-#, python-brace-format
-msgid ""
-"Set the GPU XGMI per-link power down policy using policy id, an integer. "
-"Valid id's include:\n"
-"\t{xgmi_plpd_help_info}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2940
-msgid ""
-"Set one or more sclk (aka gfxclk), mclk, fclk, pcie, or socclk frequency "
-"levels.\n"
-"\tUse `amd-smi static --clock` to find acceptable levels.\n"
-"\tUse `amd-smi static --bus` to find acceptable pcie levels."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2943
-msgid ""
-"Enable or disable the PTL on a GPU processor:\n"
-"    0 for disable and 1 for enable."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2947
-#, python-brace-format
-msgid ""
-"Set the PTL format on a GPU processor. For example, --ptl-format I8,F32\n"
-"\tSet to one of the following PTL formats: {ptl_format_help_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2953
-#, python-brace-format
-msgid ""
-"Set either PPT0 or PPT1 power capacity limit:\n"
-"\tEx: `amd-smi set -o 1300 ppt0`\n"
-"\tPPT0 min cap: {ppt0_power_cap_min}, PPT0 max cap: {ppt0_power_cap_max}\n"
-"\tPPT1 min cap: {ppt1_power_cap_min}, PPT1 max cap: {ppt1_power_cap_max}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2961
-msgid ""
-"Sets the sclk (aka gfxclk), mclk, or fclk minimum and maximum frequencies. \n"
-"\tex: amd-smi set -L (sclk | mclk | fclk) (min | max) value\n"
-"\tFor mclk and fclk ONLY, a max value is rounded down to the nearest "
-"selectable DPM level; sclk is honored exactly."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2964
-msgid ""
-"Enable or disable the GPU process isolation on a per partition basis:\n"
-"    0 for disable and 1 for enable.\n"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2969
-msgid ""
-"Set power limit for the given socket. Input parameter is power limit value."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2972
-#, python-brace-format
-msgid ""
-"Set min and max linkwidth. Input parameters are min and max link width "
-"values (MAX >= MIN, values {cpu_set_range_label})"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2975
-#, python-brace-format
-msgid ""
-"Sets the min and max dpm level on a given NBIO.        \n"
-" Input parameters are die_index, min dpm, max dpm (MAX >= MIN, values "
-"{cpu_set_range_label})."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2978
-#, python-format
-msgid ""
-"Sets the power efficiency mode policy. Input parameters,        \n"
-" MODE(0=HighPerformance, 1=PowerEfficiency, 2=IOPerformance, "
-"3=BalancedMemory, 4=BalancedCore, 5=BalancedCoreMemory),\n"
-" For Family 1Ah Models 50h-57h onwards, UTIL(%%)(0-100) and PPT_limit (in "
-"mW) required if MODE= 4 or 5"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2982
-#, python-brace-format
-msgid ""
-"Sets min and max gmi3 link width range (MAX >= MIN, values "
-"{cpu_set_range_label})"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2984
-msgid "Sets pcie link rate"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2985
-msgid "Sets min and max df-pstates (MAX <= MIN)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2986
-msgid "Enables the DF p-state performance boost algorithm"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2988
-#, python-brace-format
-msgid ""
-"Disables the DF p-state performance boost algorithm. Input parameter is "
-"DFPstate ({cpu_set_range_label})"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2991
-msgid ""
-"Sets the boost limit for the given socket. Input parameter is socket "
-"BOOST_LIMIT value"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2994
-msgid ""
-"Sets xgmi pstate range. Input parameters are min (0-1) and max (0-1), (MAX "
-"<= MIN)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2997
-msgid "Sets the CPU ISO frequency policy. Input parameter is value (0-1)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:2999
-msgid "Sets the DFCState control. Input parameter is value (0-1)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3000
-msgid "Sets PC6 enable control. Input parameter is value (0-1)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3001
-msgid "Sets CC6 enable control. Input parameter is value (0-1)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3003
-msgid ""
-"Sets the floor limit for the given CPU socket. Input parameter is CPU "
-"FLOOR_LIMIT value in MHz"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3006
-msgid ""
-"Sets the CPU MSR floor limit frequency for the given socket. Input parameter "
-"is MSR_FLOOR_LIMIT value in MHz"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3009
-msgid ""
-"Write data to DIMM sideband register. Requires DIMM_ADDR, LID(0x2->TS0,0x6-"
-">TS1,0x9->PMIC0,0xA->SPDHub)        \n"
-" REG_OFFSET (hex), REG_SPACE (REGSPACE:0->Volatile,1->NVM), WRITE_DATA (hex)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3013
-msgid ""
-"Set CPU SDPS limit for the given socket. Input parameter is SDPS limit value "
-"in milliwatts (mW)."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3018
-msgid ""
-"Sets the boost limit for the given core. Input parameter is core BOOST_LIMIT "
-"value"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3021
-msgid ""
-"Sets the floor limit for the given core. Input parameter is core FLOOR_LIMIT "
-"value in MHz"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3024
-msgid ""
-"Sets the MSR floor limit for the given core. Input parameter is core "
-"MSR_FLOOR_LIMIT value in MHz"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3108
-msgid ""
-"Set compute partition memory allocation mode (CAPPING or ALL). Requires sudo."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3191
-msgid ""
-"Set VRAM carveout size by option index.\n"
-"\tUse `amd-smi static --mem-carveout` to see available options.\n"
-"\tOnly supported on some APUs; a reboot is required after setting."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3206
-msgid ""
-"Set GTT (shared GPU memory) size in GB.\n"
-"\tThis is a system-wide setting, not per-GPU."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3219
-msgid ""
-"Activate an AMPP (amdsmi power profile) by name.\n"
-"\tUse `amd-smi static --ampp` to see available profiles."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3233
-msgid ""
-"Configure an AMPP (amdsmi power profile) custom slot by staging one or more "
-"KEY=VALUE fields, then committing them.\n"
-"\tUse `amd-smi static --ampp` to see writable profiles and field names.\n"
-"\tExample: --ampp-configure profile_2 PPT0_Limit=300\n"
-"\tAlternatively, pass @<path> to restore every writable profile found in a "
-"JSON file (as produced by `amd-smi static --ampp --json`).\n"
-"\tExample: --ampp-configure @profiles.json"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3251
-msgid ""
-"Set NPM balancing mode: POWER_BALANCING or FREQUENCY_BALANCING.\n"
-"\tThis is a system-wide setting, not per-GPU."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3266
-#, python-brace-format
-msgid ""
-"Set the node-level (NPM) power limit in watts.\n"
-"\tThis is a node-wide setting, not per-GPU.\n"
-"\tMax node power limit: {max_node_power_limit}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3280
-msgid ""
-"Configure Power Stabilization (HAWK dummy-compute insertion and Ramp "
-"Management).\n"
-"\tAccepts one or more space/comma-separated KEY=VALUE pairs (enable, "
-"power_floor, delay, insertion_priority, ramp_enable, ramp_max_ramp_up_rate, "
-"ramp_max_ramp_down_rate, ramp_min_time_at_power_floor, ramp_stop_delay), or "
-"a single @<path> argument pointing to a JSON file matching the `static --"
-"power-stabilization --json` output.\n"
-"\tenable/ramp_enable accept on/off/true/false/1/0; insertion_priority "
-"accepts a name (OPPORTUNISTIC, GUARANTEED, DYNAMIC) or its integer value; "
-"the rest, including ramp_max_ramp_up_rate/ramp_max_ramp_down_rate, are "
-"integers.\n"
-"\tExample: enable=on power_floor=70 insertion_priority=GUARANTEED "
-"ramp_max_ramp_up_rate=5\n"
-"\tEach key is applied in order; processing stops at the first failure."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3548
-msgid "Reset options for devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3550
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, will select all GPUs on the "
-"system.                                \n"
-"A reset argument must be provided; Multiple reset arguments are "
-"accepted.                                \n"
-"Requires 'sudo' privileges."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3552
-msgid "Reset Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3555
-msgid "Reset the specified GPU"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3556
-msgid "Reset clocks and overdrive to default"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3557
-msgid "Reset fans to automatic (driver) control"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3558
-msgid "Reset power profile back to default"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3559
-msgid "Reset XGMI error counts"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3560
-msgid "Disable performance determinism"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3561
-msgid "Reset the PPT0 and PPT1 power capacity limit to max capable"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3563
-msgid "Clean up local data in LDS/GPRs on a per partition basis"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3605
-msgid "Reset GTT (shared GPU memory) to system default"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3637
-msgid "Monitor metrics for target devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3639
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"Monitor a target device for the specified "
-"arguments.                                  \n"
-"If no arguments are provided, all arguments will be "
-"enabled.                                  \n"
-"Use the watch arguments to run continuously."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3641
-msgid "Monitor Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3644
-msgid "Monitor power usage and power cap in Watts"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3645
-msgid "Monitor temperature in Celsius"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3646
-msgid "Monitor base board temperatures in Celsius"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3647
-msgid "Monitor GPU board temperatures in Celsius"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3648
-#, python-format
-msgid "Monitor graphics utilization (%%) and clock (MHz)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3649
-#, python-format
-msgid "Monitor memory utilization (%%) and clock (MHz)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3650
-#, python-format
-msgid "Monitor encoder utilization (%%) and clock (MHz)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3651
-#, python-format
-msgid "Monitor decoder utilization (%%) and clock (MHz)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3652
-msgid "Monitor ECC single bit, ECC double bit, and PCIe replay error counts"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3653
-msgid "Monitor memory usage in MB"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3654
-msgid "Monitor PCIe bandwidth in Mb/s"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3656
-msgid ""
-"Enable Process information table below monitor output;\n"
-"    Process Name may require elevated permissions"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3659
-#, python-format
-msgid ""
-"Monitor power and thermal violation status (%%);\n"
-"    Only available for MI300 or newer ASICs"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3725
-msgid ""
-"Group process output by PID instead of GPU. Only applies when --process is "
-"used."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3740
-msgid "Displays xgmi information of the devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3742
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns information for all GPUs on the "
-"system.                                \n"
-"If no xgmi argument is provided, all xgmi information will be displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3744
-msgid "XGMI arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3747
-msgid "Metric XGMI information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3748
-msgid "Source GPU XGMI Link information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3749
-msgid "XGMI Link Status information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3784
-msgid "Displays partition information of the devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3786
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns information for all GPUs on the "
-"system.                                \n"
-"If no partition argument is provided, all partition information will be "
-"displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3788
-msgid "Partition arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3791
-msgid "display the current partition information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3792
-msgid "display the current memory partition mode and capabilities"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3793
-msgid "display accelerator partition information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3828
-msgid "Retrieve RAS (CPER) entries from the driver"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3830
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"Retrieve and decode RAS (CPER) entries from the kernel driver.\n"
-"Supports filtering by severity, exporting to different formats, and "
-"continuous monitoring.\n"
-"This command accepts options only; no positional arguments are required."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3832
-msgid "RAS arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3835
-msgid "Trigger current CPER data retrieval"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3836
-msgid "Generate an AFID (AMD Field ID) given a CPER record file or folder"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3840
-#, python-brace-format
-msgid ""
-"Set the SEVERITY filters from the following:\n"
-"    {severity_choices_str}"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3843
-msgid ""
-"With --cper: folder to dump current CPER report files (created if missing).\n"
-"    With --afid: existing folder of CPER records to decode."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3847
-msgid ""
-"Maximum number of current CPER files in target folder\n"
-"    Older files beyond limit will be deleted"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3849
-msgid "Full path of a retrieved CPER record file to generate the AFID"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3850
-msgid "Continuously monitor for new CPER entries"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3863
-msgid "CPER Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3880
-msgid "AFID Arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3898
-msgid "Gets power and baseboard information for the node"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3900
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"Returns information for node 0 (OAM_ID 0) on the "
-"system.                                \n"
-"If no node argument is provided, all node information except CUIDs will be "
-"displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3902
-msgid "Node arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3905
-msgid "Displays power management information"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3906
-msgid "Displays baseboard temperatures"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3907
-msgid "Displays GTT (shared GPU memory) size"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3908
-msgid "Displays compute tray type and accelerator count"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3910
-msgid ""
-"Lists the CUID of every component on the node: the platform, CPU\n"
-"packages, GPUs, NPUs and NICs. Every CUID is temporary."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3914
-msgid "Include each component's primary CUID, implying --cuid. Requires root."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3958
-msgid "Displays fabric (UALoE/UALink over Ethernet) information of the devices"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3960
-#, python-brace-format
-msgid ""
-"{description}\n"
-"\n"
-"If no GPU is specified, returns information for all GPUs on the "
-"system.                                \n"
-"If no fabric argument is provided, all fabric information will be displayed."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3962
-msgid "Fabric arguments"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3966
-msgid ""
-"Display fabric device configuration (BDF, bandwidth, latency, vPoD/pPoD, "
-"accelerator state)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3969
-msgid ""
-"Display fabric telemetry data (counters per category, instance, and item)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_parser.py:3989
-msgid ""
-"amd-smi fabric: warning: --topology now reports fabric device configuration; "
-"the counters it previously reported moved to --telemetry"
-msgstr ""
-
-#: amdsmi_cli/BDF.py:46
-#, python-brace-format
-msgid ""
-"Invalid BDF format: '{bdf}'. Expected format: [SSSS:]BB:DD.F (where F is 0-7)"
+msgid "Invalid BDF format: '{bdf}'. Expected format: [SSSS:]BB:DD.F (where F is 0-7)"
 msgstr ""
 
 #: amdsmi_cli/BDF.py:53
@@ -2032,6 +45,21 @@ msgstr ""
 
 #: amdsmi_cli/BDF.py:65
 msgid "Function can't be greater than 7"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_cli.py:63 amdsmi_cli/amdsmi_init.py:51
+#, python-brace-format
+msgid "Unhandled import error: {e}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_cli.py:65
+#, python-brace-format
+msgid "Unable to import amdsmi_cli files. Check {cli_files_path} if they are present."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_cli.py:84
+#, python-brace-format
+msgid "Error occurred. Result written to {destination} file"
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
@@ -2275,22 +303,26 @@ msgstr ""
 msgid "Unrecognized error code {code}"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:284
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:283
 #, python-brace-format
 msgid "{common_message} Error code: {value} [{error_type_name}]"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:311
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:310
 #, python-brace-format
 msgid "Command '{command}' is invalid. Run 'amd-smi -h' for more info."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:329
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:328
 #, python-brace-format
 msgid "Parameter '{arg}' is invalid. Run 'amd-smi {command} -h' for more info."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:350
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:349
 #, python-brace-format
 msgid "Can not find a device: {device_type} '{command}'"
 msgstr ""
@@ -2301,276 +333,1713 @@ msgstr ""
 msgid "Path '{command}' cannot be found."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:382
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:381
 #, python-brace-format
-msgid ""
-"Value '{arg}' is not of valid type or format. Run 'amd-smi {command} -h' for "
-"more info."
+msgid "Value '{arg}' is not of valid type or format. Run 'amd-smi {command} -h' for more info."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:400
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:399
 #, python-brace-format
 msgid "Parameter '{command}' requires a value. Run '--help' for more info."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli_exceptions.py:418
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_cli_exceptions.py:417
 #, python-brace-format
-msgid ""
-"Command '{command}' is not supported on the system. Run '--help' for more "
-"info."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_cli_exceptions.py:433
-#, python-brace-format
-msgid ""
-"Command '{command}' requires a target argument. Run 'amd-smi {command} -h' "
-"for more info."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_cli_exceptions.py:448
-#, python-brace-format
-msgid ""
-"AMD-SMI Command '{command}' is invalid. Must receive valid AMD-SMI Command "
-"first. Run 'amd-smi -h' for more info."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_cli_exceptions.py:467
-#, python-brace-format
-msgid ""
-"AMD-SMI Command '{command}' requires elevation (sudo privileges required)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_cli_exceptions.py:488
-#, python-brace-format
-msgid ""
-"{subject} requires the {names} driver but it is not loaded. Check {names} "
-"version and module status ({loads})."
-msgstr ""
-
-#: amdsmi_cli/amdsmi_cli_exceptions.py:496
-#, python-brace-format
-msgid ""
-"{subject} requires the {names} driver but none is loaded. Check {names} "
-"version and module status ({loads})."
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:74
-#, python-brace-format
-msgid ""
-"Command '{command}' requires exactly one of '--cper-file' or '--folder'. Run "
-"'--help' for more info."
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:85
-#, python-brace-format
-msgid ""
-"Folder '{folder}' is a symlink; refusing to follow it for '--afid --folder'."
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:91
-#, python-brace-format
-msgid ""
-"Folder '{folder}' does not exist or is not a directory. '--afid --folder' "
-"requires a folder of pre-existing CPER records."
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:101
-#, python-brace-format
-msgid "Folder '{folder}' is a symlink; refusing to write CPER files into it."
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:111
-#, python-brace-format
-msgid "Unable to create or access folder '{folder}': {e}"
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:129
-#, python-brace-format
-msgid ""
-"Folder '{folder}' contains no '.cper' files. '--afid --folder' requires a "
-"folder of pre-existing CPER records."
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:225
-#, python-brace-format
-msgid "Unable to read CPER file '{cper_file}': {e}"
-msgstr ""
-
-#: amdsmi_cli/subcommands/ras.py:302
-msgid "Press CTRL + C to stop."
-msgstr ""
-
-#: amdsmi_cli/subcommands/event.py:42
-msgid "EVENT LISTENING:\n"
-msgstr ""
-
-#: amdsmi_cli/subcommands/event.py:43
-msgid "Press q and hit ENTER when you want to stop."
-msgstr ""
-
-#: amdsmi_cli/subcommands/event.py:66
-msgid "Escape Sequence Detected; Exiting"
-msgstr ""
-
-#: amdsmi_cli/subcommands/event.py:89
-msgid "No GPUs on machine"
+msgid "Command '{command}' is not supported on the system. Run '--help' for more info."
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:900
-#: amdsmi_cli/subcommands/set_value.py:920
+#: amdsmi_cli/amdsmi_cli_exceptions.py:432
 #, python-brace-format
-msgid "Unable to read '{file_path}': {e}"
+msgid "Command '{command}' requires a target argument. Run 'amd-smi {command} -h' for more info."
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:906
+#: amdsmi_cli/amdsmi_cli_exceptions.py:447
 #, python-brace-format
-msgid "'{file_path}' is not a regular file."
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:930
-#, python-brace-format
-msgid "'{file_path}' exceeds the {limit}-byte limit for a replay file."
+msgid "AMD-SMI Command '{command}' is invalid. Must receive valid AMD-SMI Command first. Run 'amd-smi -h' for more info."
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:940
+#: amdsmi_cli/amdsmi_cli_exceptions.py:466
 #, python-brace-format
-msgid "'{file_path}' is not valid UTF-8: {e}"
+msgid "AMD-SMI Command '{command}' requires elevation (sudo privileges required)"
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:947
+#: amdsmi_cli/amdsmi_cli_exceptions.py:487
 #, python-brace-format
-msgid "'{file_path}' is not valid JSON: {e}"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:955
-#, python-brace-format
-msgid ""
-"'{file_path}' is not an 'amd-smi static --{cli_flag} --json' shaped file "
-"(expected a top-level 'gpu_data' list)."
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:979
-#, python-brace-format
-msgid ""
-"'{file_path}' has no entry for GPU {gpu_id} (BDF:{gpu_bdf}). Found gpu ids: "
-"{value}"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:995
-#, python-brace-format
-msgid "'{file_path}' has no {label} data for GPU {gpu_id} (BDF:{gpu_bdf})."
+msgid "{subject} requires the {names} driver but it is not loaded. Check {names} version and module status ({loads})."
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:1206
+#: amdsmi_cli/amdsmi_cli_exceptions.py:495
 #, python-brace-format
-msgid "'{file_path}': {e}"
+msgid "{subject} requires the {names} driver but none is loaded. Check {names} version and module status ({loads})."
 msgstr ""
 
-#: amdsmi_cli/subcommands/set_value.py:1591
-#, python-brace-format
-msgid ""
-"\n"
-"Performance Level Options:\n"
-"\t{perf_options}\n"
+#: amdsmi_cli/amdsmi_commands.py:119
+msgid "Unable to get devices, driver not initialized (amdgpu not found in modules)"
 msgstr ""
 
-#: amdsmi_cli/subcommands/set_value.py:1670
-#, python-brace-format
-msgid ""
-"\n"
-"Available Power Profiles:\n"
-"\t{available_str}\n"
+#: amdsmi_cli/amdsmi_commands.py:129
+msgid "Unable to detect any GPU devices, check amdgpu version and module status (sudo modprobe amdgpu)"
 msgstr ""
 
-#: amdsmi_cli/subcommands/set_value.py:1849
-#, python-brace-format
-msgid "Valid Memory partition Modes: {caps}\n"
+#: amdsmi_cli/amdsmi_commands.py:145
+msgid "Unable to get devices, NIC driver not initialized"
 msgstr ""
 
-#: amdsmi_cli/subcommands/set_value.py:1890
-#, python-brace-format
-msgid "Valid SOC P-State Policies: [{policy_string}]\n"
+#: amdsmi_cli/amdsmi_commands.py:172 amdsmi_cli/amdsmi_commands.py:198
+msgid "Unable to detect any CPU devices, check amd_hsmp (or) hsmp_acpi version and module status (sudo modprobe amd_hsmp (or) sudo modprobe hsmp_acpi)"
 msgstr ""
 
-#: amdsmi_cli/subcommands/set_value.py:1932
-#, python-brace-format
-msgid "Valid XGMI PLPD Policies: [{policy_string}]\n"
+#: amdsmi_cli/amdsmi_commands.py:188
+msgid "Unable to get CORE devices, amd_hsmp driver not loaded (sudo modprobe amd_hsmp)"
 msgstr ""
 
-#: amdsmi_cli/subcommands/set_value.py:2216
-msgid "Valid clock types are: sclk, mclk, fclk\n"
+#: amdsmi_cli/amdsmi_commands.py:214
+msgid "Not applicable to linux baremetal"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:243 amdsmi_cli/amdsmi_rocm_smi_compat.py:1026
+msgid "Failed to initialize AMD SMI"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:251 amdsmi_cli/amdsmi_rocm_smi_compat.py:1034
+msgid "No AMD GPU devices found"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:257 amdsmi_cli/amdsmi_rocm_smi_compat.py:1044
+msgid "\nWARNING: AMD GPU device(s) is/are in a low-power state. Check power control/runtime_status\n"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:273
+#, python-brace-format
+msgid "Could not import ROCm-SMI compatibility module: {e}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:274
+msgid "Make sure amdsmi_rocm_smi_compat.py is in the amdsmi_cli directory"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:275
+msgid "ERROR: ROCm-SMI compatibility mode not available"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_commands.py:277
+#, python-brace-format
+msgid "Error in ROCm-SMI compatibility mode: {e}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:1349
+msgid "'CTRL' + 'C' to stop watching output:"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:1385
+msgid "Unable to find gpu ID from device_handle"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:1401
+msgid "Unable to find nic ID from device_handle"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:1416
+msgid "Unable to find cpu ID from device_handle"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:1430
+msgid "Unable to find core ID from device_handle"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:2071
+msgid "\n            ******WARNING******\n\n            Operating your AMD GPU outside of official AMD specifications or outside of\n            factory settings, including but not limited to the conducting of overclocking,\n            over-volting or under-volting (including use of this interface software,\n            even if such software has been directly or indirectly provided by AMD or otherwise\n            affiliated in any way with AMD), may cause damage to your AMD GPU, system components\n            and/or result in system failure, as well as cause other problems.\n            DAMAGES CAUSED BY USE OF YOUR AMD GPU OUTSIDE OF OFFICIAL AMD SPECIFICATIONS OR\n            OUTSIDE OF FACTORY SETTINGS ARE NOT COVERED UNDER ANY AMD PRODUCT WARRANTY AND\n            MAY NOT BE COVERED BY YOUR BOARD OR SYSTEM MANUFACTURER'S WARRANTY.\n            Please use this utility with caution.\n            "
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:2085
+msgid "Do you accept these terms? [y/n] "
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:2089 amdsmi_cli/amdsmi_helpers.py:2131
+#: amdsmi_cli/amdsmi_parser.py:881
+msgid "Confirmation not given. Exiting without setting value"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:2099
+msgid "\n            ******WARNING******\n\n            After changing memory (NPS) partition modes, users MUST restart\n            (reload) the AMD GPU driver. Use modprobe to reload the driver:\n\n                sudo modprobe -r amdgpu\n                sudo modprobe amdgpu\n\n            This change is intended to allow users the ability to control when is\n            the best time to restart the AMD GPU driver, as it may not be desired\n            to restart the AMD GPU driver immediately after changing the\n            memory (NPS) partition mode.\n\n            Please reload the AMD GPU driver AFTER successfully\n            changing the memory (NPS) partition mode. A successful driver reload\n            is REQUIRED in order to complete updating ALL GPUs in the hive to\n            the requested partition mode.\n\n            A requested mode stays pending until the next driver reload.\n            Requesting the current mode cancels a pending mode.\n\n            ******REMINDER******\n            In order to reload the AMD GPU driver, users MUST quit all GPU\n            workloads across all devices.\n            "
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:2126
+msgid "Do you accept these terms? [Y/N] "
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:286
+#, python-brace-format
+msgid "Note: {label} {devices}: {driver} driver not loaded (sudo modprobe {driver})"
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:2403
-msgid ""
-"VRAM carveout can only be set for a single GPU. Please specify --gpu <id>"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:2513
-#, python-brace-format
-msgid ""
-"\n"
-"Valid AMPP Profiles: [{available_str}]\n"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:2562
-#, python-brace-format
-msgid ""
-"\n"
-"Writable AMPP Profiles: [{available_str}]\n"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:2751
-msgid ""
-"amd-smi set: error: argument --gtt/-G: not allowed with argument --gpu/-g (--"
-"gtt is a system-wide setting, not per-GPU)"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:2785
-msgid ""
-"amd-smi set: error: argument --node-balancing-mode: not allowed with "
-"argument --gpu/-g (--node-balancing-mode is a system-wide setting, not per-"
-"GPU)"
-msgstr ""
-
-#: amdsmi_cli/subcommands/set_value.py:2803
-msgid ""
-"amd-smi set: error: argument --node-power-limit/-n: not allowed with "
-"argument --gpu/-g (--node-power-limit is a node-wide setting, not per-GPU)"
+#: amdsmi_cli/amdsmi_helpers.py:3073
+msgid "Error opening CPER file. Unable to read CPER File"
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:2986
-msgid "Cannot set GPU, CPU, and CORE arguments at the same time"
+#: amdsmi_cli/amdsmi_helpers.py:3139
+msgid "Fabric CPER entries exceed internal buffer capacity"
 msgstr ""
 
 #. Error message (human-readable output only; JSON/CSV keep English).
-#: amdsmi_cli/subcommands/set_value.py:2993
-msgid "Cannot set GPU, CPU, or CORE arguments at the same time"
+#: amdsmi_cli/amdsmi_helpers.py:3173
+msgid "Error accessing CPER files. This command requires CPER to be enabled."
 msgstr ""
 
-#: amdsmi_cli/subcommands/reset.py:92
-msgid ""
-"amd-smi reset: error: argument --gtt: not allowed with argument --gpu/-g (--"
-"gtt is a system-wide setting, not per-GPU)"
+#: amdsmi_cli/amdsmi_helpers.py:339 amdsmi_cli/amdsmi_helpers.py:392
+msgid "Unable to get device choices, driver not initialized (amd_hsmp  or hsmp_acpi not found in modules)"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli.py:66
+#: amdsmi_cli/amdsmi_helpers.py:347
+msgid "Unable to find any devices, check if driver is initialized (amd_hsmp or hsmp_acpi not found in modules)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3611
 #, python-brace-format
-msgid ""
-"Unable to import amdsmi_cli files. Check {cli_files_path} if they are "
-"present."
+msgid "Unable to set {power_type_key} power cap to {requested_power_cap}W. Power cap must be between {min_power_cap}W and {max_power_cap}W"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_cli.py:84
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3688
+msgid "No node handle available; cannot set balancing mode"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3724
 #, python-brace-format
-msgid "Error occurred. Result written to {destination} file"
+msgid "Successfully set NPM balancing mode to {requested_mode}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3738
+#, python-brace-format
+msgid "BALANCING_MODE: [{get_error_info}] {requested_mode} is not supported on this platform"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3744
+msgid "NPM balancing mode is not supported on this node; cannot set balancing mode"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3806
+msgid "Node power limit cannot be set: NPM is disabled on this node"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3817
+msgid "Node power limit cannot be validated: platform maximum is unavailable"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_helpers.py:3827
+#, python-brace-format
+msgid "Node power limit must be between 1W and {max_node_power_limit}W"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:3870
+msgid "Reboot required for changes to take effect. Please reboot manually."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:3873
+msgid "Would you like to reboot the system now? (y/n): "
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:3892
+msgid "D-Bus reboot failed, falling back to systemctl..."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:3903
+msgid "Failed to initiate reboot. Please reboot manually."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:400
+msgid "Unable to find any devices, check if driver is initialized (amd_hsmp or hsmp_acpi  not found in modules)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:550
+msgid "Unable to get device choices, driver not initialized (amdgpu not found in modules)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:559
+msgid "Unable to find any devices, check if driver is initialized (amdgpu not found in modules)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:621
+msgid "Unable to get device choices, driver not initialized (IONIC_NIC, RDMA_NIC not found in modules)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_helpers.py:630
+msgid "Unable to find any devices, check if driver is initialized (IONIC_NIC, RDMA_NIC not found in modules)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_init.py:196
+#, python-format
+msgid "amdsmi_init() timed out after %ds. The GPU driver may be unresponsive."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_init.py:212 amdsmi_cli/amdsmi_init.py:223
+msgid "Drivers not loaded (amdgpu, amd_hsmp drivers not found in modules)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_init.py:242
+msgid "Unable to cleanly shut down amd-smi-lib"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_init.py:252
+#, python-format
+msgid "Unable to cleanly shut down amd-smi-lib, exception: %s"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_init.py:53
+msgid "Failed to import the amdsmi Python library. Install amd-smi-lib (rpm/deb) or pip install the amdsmi wheel."
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1338
+#, python-brace-format
+msgctxt "table"
+msgid "| AMD-SMI            {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1342
+#, python-brace-format
+msgctxt "table"
+msgid "| amdgpu Version:    {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1344
+#, python-brace-format
+msgctxt "table"
+msgid "| OS kernel Version: {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1347
+#, python-brace-format
+msgctxt "table"
+msgid "| amdgpu Package:    {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1350
+#, python-brace-format
+msgctxt "table"
+msgid "| ROCm Version:      {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1354
+#, python-brace-format
+msgctxt "table"
+msgid "| VBIOS Version:     {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1356
+#, python-brace-format
+msgctxt "table"
+msgid "| FW PLDM:           {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1359
+#, python-brace-format
+msgctxt "table"
+msgid "| Platform:          {0:<{w}s} |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1365
+msgctxt "table"
+msgid "| BDF                        GPU-Name | Mem-Uti   Temp   UEC       Power-Usage |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1368
+msgctxt "table"
+msgid "| GPU  HIP-ID  OAM-ID  Partition-Mode | GFX-Uti    Fan               Mem-Usage |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1454
+msgctxt "table"
+msgid "| Processes:                                                                   |"
+msgstr ""
+
+#. Fixed-width table text: keep the exact width (count characters) and the '|' borders.
+#: amdsmi_cli/amdsmi_logger.py:1466
+msgctxt "table"
+msgid "|  No running processes found                                                  |"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_logger.py:1472
+msgid "Process Name may require elevated permissions."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_logger.py:554 amdsmi_cli/amdsmi_logger.py:575
+#: amdsmi_cli/amdsmi_logger.py:596 amdsmi_cli/amdsmi_logger.py:617
+#: amdsmi_cli/amdsmi_logger.py:743
+msgid "Invalid output format: expected json, csv, or human_readable"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_logger.py:662
+msgid "No AI NICs found"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1127 amdsmi_cli/amdsmi_parser.py:1162
+msgid "Reprint the command in a loop of INTERVAL seconds"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1128
+msgid "The total TIME to watch the given command"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1129
+msgid "Total number of ITERATIONS to loop on the given command"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1163
+msgid "The total duration of TIME to watch the command"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1164
+msgid "The total number of ITERATIONS to repeat the command"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1166
+msgid "Watch Arguments"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1491
+msgid "Missing PROFILE_NAME argument"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1507
+msgid "'@<path>' must be the only argument when loading profiles from a file."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1517
+msgid "File path cannot be empty after '@'."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1539
+msgid "Missing at least one KEY=VALUE field argument for --ampp-configure"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1550
+msgid "Fields must be given as KEY=VALUE (e.g. PPT0_Limit=300)."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1563
+#, python-brace-format
+msgid "Field name cannot be empty or exceed {AMDSMI_MAX_STRING_LENGTH} bytes in KEY=VALUE."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:1574
+#, python-brace-format
+msgid "Field value must be an integer within int64 range (got '{raw_value}')."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1667
+#, python-brace-format
+msgid "Select a GPU ID, BDF, UUID or CUID from the possible choices:\n{gpu_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1670
+msgid "Gets general information about the specified VF (timeslice, fb info, …).                    \nAvailable only on virtualization OSs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1674
+#, python-brace-format
+msgid "Select a CPU ID from the possible choices:\n{cpu_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1677
+#, python-brace-format
+msgid "Select a NIC ID from the possible choices:\n{nic_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1680
+#, python-brace-format
+msgid "Select a Core ID from the possible choices:\n{core_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1685
+msgid "Device Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1704 amdsmi_cli/amdsmi_parser.py:1866
+msgid "Static Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1720
+#, python-brace-format
+msgid "Select a NIC ID, BDF, or UUID from the possible choices; a bare --nic selects every NIC:\n{nic_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1729
+msgid "Displays output in JSON format"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1730
+msgid "Displays output in CSV format"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1731
+msgid "Saves output into a file on the provided path"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1734
+#, python-brace-format
+msgid "Set the logging level from the possible choices:\n    {loglevel_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1738
+msgid "Command Modifiers"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1753
+msgid "Overwrite the file"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1756
+msgid "Append to the file"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1784
+msgid "Display version information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1799
+msgid "Display the current amdgpu driver version and package"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1800
+msgid "Display the current amd_hsmp or hsmp_acpi driver version"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1801
+msgid "Display the current nic driver version"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1835
+msgid "List GPU information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1836
+msgid "List Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1837
+#, python-brace-format
+msgid "{description}\n\nLists all detected devices on the system.                            \nLists the BDF, UUID, KFD_ID, NODE_ID, Partition ID and CUID for each GPU and/or CPUs.                            \nIn virtualization environments, it can also list VFs associated to each                            \nGPU with some basic information for each VF."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1840
+msgid "Enumeration mapping to other features.                            \n    Includes CARD, RENDER, HSA_ID, HIP_ID, HIP_UUID, OAM_ID, and PHYSICAL_ACC_ID"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1862
+msgid "Gets static information about the specified GPU"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1863
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns static information for all GPUs on the system.                                \nIf no static argument is provided, all static information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1869
+msgid "All asic information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1870
+msgid "All bus information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1871
+msgid "All video bios/IFWI information (if available)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1872
+msgid "All limit metric values (i.e. power and thermal limits)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1873
+msgid "Displays driver version and package"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1874
+msgid "All vram information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1875
+msgid "All cache information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1876
+msgid "All board information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1877
+msgid "The available soc pstate policy"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1878
+msgid "The available XGMI per-link power down policy"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1879
+msgid "The process isolation status"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1880
+msgid "Component Unified ID: the CUID, its component type, which layer answered,\nand whether it is temporary.\nNot part of the default `amd-smi static` output; ask for it."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1885
+msgid "Display current and available power profiles"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1889
+#, python-brace-format
+msgid "Show one or more valid clock frequency levels. Available options:\n\t{clk_option_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1895
+msgid "Displays RAS features information;\n\tSudo may be required for some features"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1898
+msgid "All numa node information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1899
+msgid "Partition information:\n\tNo longer available in default output.\n\tArgument is required to display.\n\tEx. `amd-smi static -p` or use\n\t`amd-smi partition -c -m`/`sudo amd-smi partition -a`"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1907
+msgid "All DFC FW table information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1908
+msgid "Displays Frame Buffer information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1909
+msgid "Displays number of supported and enabled VFs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1912
+msgid "All SMU FW information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1913
+msgid "Displays hsmp interface version"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1984
+msgid "Display VRAM carveout memory options and current setting.\n\tOnly supported on some APUs."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:1992
+msgid "Display AMPP (amdsmi power profile) recipe table: per-profile version/active/writable/configured state and per-field name/unit/value/min/max."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2023
+msgid "Power Stabilization status (HAWK dummy-compute insertion and Ramp Management)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2048 amdsmi_cli/amdsmi_parser.py:2441
+#: amdsmi_cli/amdsmi_parser.py:3299
+msgid "CPU Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2066
+msgid "Gets firmware information about the specified GPU or NIC"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2067
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, return firmware information for all GPUs on the system."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2070
+msgid "Firmware Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2073
+msgid "All FW list information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2074
+msgid "All error records information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2120
+msgid "Gets bad page information about the specified GPU"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2121
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, return bad page information for all GPUs on the system."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2124
+msgid "Bad Pages Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2127
+msgid "Displays all pending retired pages"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2128
+msgid "Displays retired pages"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2129
+msgid "Displays unreservable pages"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2130
+msgid "Displays page addresses and sizes in hexadecimal format"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2186
+msgid "Gets metric/performance information about the specified GPU or NIC"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2187
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns metric information for all GPUs on the system.                                \nIf no metric argument is provided, all metric information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2191
+msgid "Metric arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2194
+msgid "Displays engine usage information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2197
+msgid "Memory usage per block"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2200
+msgid "Current power usage"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2201
+msgid "Average, max, and current clock frequencies"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2202
+msgid "Current temperatures"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2203
+msgid "Total number of ECC errors"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2204
+msgid "Number of ECC errors per block"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2205
+msgid "Current PCIe speed, width, and replay count"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2206
+msgid "GPU voltage"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2207
+msgid "base_board temperatures"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2208
+msgid "gpu_board temperatures"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2211
+msgid "Current fan speed"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2212
+msgid "Display voltage curve"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2213
+msgid "Current GFX and MEM clock overdrive level"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2214
+msgid "Current DPM performance level"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2215
+msgid "XGMI error information since last read"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2216
+msgid "Amount of energy consumed"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2217
+msgid "Displays throttle accumulators;\n    Only available for MI300 or newer ASICs and APUs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2220
+msgid "Switch temperature, clock, and usage to partition-scoped\n    (XCP/AID/MID) data sources; combine with those flags to scope it;\n    Only available for MI300 or newer ASICs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2225
+msgid "Print every field, including the ones the GPU's gpu_metrics\n    table version cannot carry and which are omitted by default;\n    affects human-readable output only, since --json and --csv\n    always print every field"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2233
+msgid "All scheduling information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2234
+msgid "All guard information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2235
+msgid "All guest data information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2236
+msgid "Displays total and used Frame Buffer usage information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2237
+msgid "Table of current XGMI metrics information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2240
+msgid "CPU power metrics"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2241
+msgid "Displays prochot status"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2242
+msgid "Displays currentFclkMemclk frequencies and cclk frequency limit"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2243
+msgid "Displays C0 residency"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2244
+msgid "Displays lclk dpm level range. Requires socket ID and NBOID as inputs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2247
+msgid "Displays current power efficiency mode.        \n For Family 1Ah Models 50h-57h onwards and MODE= 4 or 5, displays utilization percentage and PPT limit in Watts."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2251
+msgid "Displays svi based telemetry for all rails"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2252
+msgid "Displays current IO bandwidth for the selected CPU.        \n input parameters are bandwidth type(1) and link ID encodings        \n i.e. P2, P3, G0 - G7"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2257
+msgid "Displays current XGMI bandwidth for the selected CPU        \n input parameters are bandwidth type(1,2,4) and link ID encodings        \n i.e. P2, P3, G0 - G7"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2262
+msgid "Displays metrics table version"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2263
+msgid "Displays metric table"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2264
+msgid "Displays socket energy for the selected CPU socket"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2265
+msgid "Displays per socket max ddr bw, current utilized bw,        \n and current utilized ddr bw in percentage"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2269
+msgid "Displays cpu socket temperature"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2270
+msgid "Displays dimm temperature range and refresh rate"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2271
+msgid "Displays dimm power consumption"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2272
+msgid "Displays dimm thermal sensor"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2273
+msgid "Displays XGMI pstate range, min and max values for the selected CPU"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2276
+msgid "Displays CPU ISO frequency policy"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2277
+msgid "Displays DFCState control status"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2278
+msgid "Displays PC6 enable control"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2279
+msgid "Displays CC6 enable control"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2280
+msgid "Read DIMM sideband register.Requires DIMM_ADDR, LID(0x2->TS0,0x6->TS1,0x9->PMIC0,0xA->SPDHub)        \n REG_OFFSET (hex), REG_SPACE (REGSPACE:0->Volatile,1->NVM)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2284
+msgid "Displays CPU thermal delta (TDELTA) value for the selected CPU socket"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2287
+msgid "Get SVI3 VR controller temperature. TYPE: 0=HottestRail, 1=IndividualRail, RAIL_INDEX:        \n (RAIL_INDEX:0->VDDCR_CPU0,1->VDDCR_CPU1,2->VDDCR_SOC,3->VDDIO,4->VDDIO_MEM_S3) must be, specified if TYPE is 1"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2291
+msgid "Displays HSMP enabled commands bit masks (Read/Write EnabledCommandsBitMask0-2)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2294
+msgid "Displays CPU SDPS limit for the selected CPU socket in Watts"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2297
+msgid "Displays core energy for the selected core"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2298
+msgid "Get boost limit for the selected cores"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2299
+msgid "Get Current CCLK limit set per Core"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2300
+msgid "Displays ccd power consumption for the selected core"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2301
+msgid "Displays floor limit frequency for the selected core in MHz"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2302
+msgid "Displays effective floor limit frequency for the selected core in MHz"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:233
+#, python-brace-format
+msgid "AMD System Management Interface | {version_string} | {rocm_version_string} | {platform_string}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:245
+msgid "For detailed help on specific commands: amd-smi [command] -h"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:254
+msgid "Display GPU information in ROCm-SMI compatible format"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:259
+#, python-brace-format
+msgid "Set the logging level from the possible choices: {join}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2601 amdsmi_cli/amdsmi_parser.py:3473
+msgid "CPU Core Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2634
+msgid "Show per-port statistics for the selected NIC.\n    Bare --port shows all ports; --port <idx> shows one port."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2638
+msgid "Show the extended vendor statistics set. Requires --port."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2639
+msgid "Show RDMA hardware counters per RDMA port for the selected NIC.\n    Bare --rdma shows all RDMA ports; --rdma <idx> shows one port.\n    The index counts the NIC's RDMA ports from 0, across its RDMA devices.\n    List the ports with 'static --nic'; it numbers them per device."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2645
+msgid "Show every hwmon sensor of the selected NIC with its thresholds\n    (temperature, voltage and power), like the sensors command."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2650
+msgid "NIC Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2699
+msgid "Lists compute process information running on the specified GPU"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2700
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns information for all GPUs on the system.                                \nIf no process argument is provided, all process information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2703
+msgid "Process arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2706
+msgid "pid, process name, memory usage"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2707
+msgid "All engine usages"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2708
+msgid "Gets compute process GPU information about the specified process based on Process ID"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2711
+msgid "Gets compute process GPU information about the specified process based on Process Name.                    \nIf multiple processes have the same name, information is returned for all of them.                    \nProcess Name may require elevated permissions."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:275
+msgid "AMD-SMI Commands"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2753
+msgid "Group process output by PID instead of GPU."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2767
+msgid "Displays information about all profiles and current profile"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2768
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns information for all GPUs on the system."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:277
+msgid "Descriptions:"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2771
+msgid "Profile Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2791
+msgid "Displays event information for the given GPU"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2792
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns event information for all GPUs on the system."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2795
+msgid "Event Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2815
+msgid "Displays topology information of the devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2816
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns information for all GPUs on the system.                                \nIf no topology argument is provided, all topology information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2819
+msgid "Topology arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2822
+msgid "Displays link accessibility between GPUs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2823
+msgid "Displays relative weight between GPUs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2824
+msgid "Displays the number of hops between GPUs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2825
+msgid "Displays the link type between GPUs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2826
+msgid "Display max and min bandwidth between nodes"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2827
+msgid "Display cache coherent (or non-coherent) link capability between nodes"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2828
+msgid "Display 32 and 64-bit atomic io link capability between nodes"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2829
+msgid "Display P2P direct memory access (DMA) link capability between nodes"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2830
+msgid "Display P2P bi-directional link capability between nodes"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2879
+msgid "Set options for devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2880
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, will select all GPUs on the system.                                    \nA set argument must be provided; Multiple set arguments are accepted.                                    \nRequires 'sudo' privileges."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2883
+msgid "Set Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2892
+#, python-brace-format
+msgid "Set GPU fan speed :{fan_support}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2897
+#, python-brace-format
+msgid "Set GPU fan speed ({fan_support})"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2901
+#, python-brace-format
+msgid "Set one of the following performance levels:\n\t{perf_level_help_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2905
+#, python-brace-format
+msgid "Set power profile level (#) or choose one of available profiles:\n\t{power_profile_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2908
+msgid "Enable performance determinism mode and set GFXCLK softmax limit (in MHz)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2914
+#, python-brace-format
+msgid "Set one of the following accelerator TYPE or profile INDEX:\n\t{accelerator_set_choices_str}.\n\tUse `sudo amd-smi partition --accelerator` to find acceptable values."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2918
+#, python-brace-format
+msgid "Set one of the following memory partition modes:\n\t{memory_partition_choices_str}\n\tThe mode applies at the next driver reload.\n\tSetting the current mode cancels a pending change."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2922
+#, python-brace-format
+msgid "Set the GPU soc pstate policy using policy id, an integer. Valid id's include:\n\t{soc_pstate_help_info}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2926
+#, python-brace-format
+msgid "Set the GPU XGMI per-link power down policy using policy id, an integer. Valid id's include:\n\t{xgmi_plpd_help_info}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2929
+msgid "Set one or more sclk (aka gfxclk), mclk, fclk, pcie, or socclk frequency levels.\n\tUse `amd-smi static --clock` to find acceptable levels.\n\tUse `amd-smi static --bus` to find acceptable pcie levels."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2932
+msgid "Enable or disable the PTL on a GPU processor:\n    0 for disable and 1 for enable."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2936
+#, python-brace-format
+msgid "Set the PTL format on a GPU processor. For example, --ptl-format I8,F32\n\tSet to one of the following PTL formats: {ptl_format_help_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2942
+#, python-brace-format
+msgid "Set either PPT0 or PPT1 power capacity limit:\n\tEx: `amd-smi set -o 1300 ppt0`\n\tPPT0 min cap: {ppt0_power_cap_min}, PPT0 max cap: {ppt0_power_cap_max}\n\tPPT1 min cap: {ppt1_power_cap_min}, PPT1 max cap: {ppt1_power_cap_max}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2950
+msgid "Sets the sclk (aka gfxclk), mclk, or fclk minimum and maximum frequencies. \n\tex: amd-smi set -L (sclk | mclk | fclk) (min | max) value\n\tFor mclk and fclk ONLY, a max value is rounded down to the nearest selectable DPM level; sclk is honored exactly."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2953
+msgid "Enable or disable the GPU process isolation on a per partition basis:\n    0 for disable and 1 for enable.\n"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2958
+msgid "Set power limit for the given socket. Input parameter is power limit value."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2961
+#, python-brace-format
+msgid "Set min and max linkwidth. Input parameters are min and max link width values (MAX >= MIN, values {cpu_set_range_label})"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2964
+#, python-brace-format
+msgid "Sets the min and max dpm level on a given NBIO.        \n Input parameters are die_index, min dpm, max dpm (MAX >= MIN, values {cpu_set_range_label})."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2967
+msgid "Sets the power efficiency mode policy. Input parameters,        \n MODE(0=HighPerformance, 1=PowerEfficiency, 2=IOPerformance, 3=BalancedMemory, 4=BalancedCore, 5=BalancedCoreMemory),\n For Family 1Ah Models 50h-57h onwards, UTIL(%%)(0-100) and PPT_limit (in mW) required if MODE= 4 or 5"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2971
+#, python-brace-format
+msgid "Sets min and max gmi3 link width range (MAX >= MIN, values {cpu_set_range_label})"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2974
+msgid "Sets pcie link rate"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2975
+msgid "Sets min and max df-pstates (MAX <= MIN)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2976
+msgid "Enables the DF p-state performance boost algorithm"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2977
+#, python-brace-format
+msgid "Disables the DF p-state performance boost algorithm. Input parameter is DFPstate ({cpu_set_range_label})"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2980
+msgid "Sets the boost limit for the given socket. Input parameter is socket BOOST_LIMIT value"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2983
+msgid "Sets xgmi pstate range. Input parameters are min (0-1) and max (0-1), (MAX <= MIN)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2986
+msgid "Sets the CPU ISO frequency policy. Input parameter is value (0-1)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2989
+msgid "Sets the DFCState control. Input parameter is value (0-1)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2990
+msgid "Sets PC6 enable control. Input parameter is value (0-1)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2991
+msgid "Sets CC6 enable control. Input parameter is value (0-1)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2992
+msgid "Sets the floor limit for the given CPU socket. Input parameter is CPU FLOOR_LIMIT value in MHz"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2995
+msgid "Sets the CPU MSR floor limit frequency for the given socket. Input parameter is MSR_FLOOR_LIMIT value in MHz"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:2998
+msgid "Write data to DIMM sideband register. Requires DIMM_ADDR, LID(0x2->TS0,0x6->TS1,0x9->PMIC0,0xA->SPDHub)        \n REG_OFFSET (hex), REG_SPACE (REGSPACE:0->Volatile,1->NVM), WRITE_DATA (hex)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3002
+msgid "Set CPU SDPS limit for the given socket. Input parameter is SDPS limit value in milliwatts (mW)."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3007
+msgid "Sets the boost limit for the given core. Input parameter is core BOOST_LIMIT value"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3010
+msgid "Sets the floor limit for the given core. Input parameter is core FLOOR_LIMIT value in MHz"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3013
+msgid "Sets the MSR floor limit for the given core. Input parameter is core MSR_FLOOR_LIMIT value in MHz"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3097
+msgid "Set compute partition memory allocation mode (CAPPING or ALL). Requires sudo."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3180
+msgid "Set VRAM carveout size by option index.\n\tUse `amd-smi static --mem-carveout` to see available options.\n\tOnly supported on some APUs; a reboot is required after setting."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3195
+msgid "Set GTT (shared GPU memory) size in GB.\n\tThis is a system-wide setting, not per-GPU."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3208
+msgid "Activate an AMPP (amdsmi power profile) by name.\n\tUse `amd-smi static --ampp` to see available profiles."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3222
+msgid "Configure an AMPP (amdsmi power profile) custom slot by staging one or more KEY=VALUE fields, then committing them.\n\tUse `amd-smi static --ampp` to see writable profiles and field names.\n\tExample: --ampp-configure profile_2 PPT0_Limit=300\n\tAlternatively, pass @<path> to restore every writable profile found in a JSON file (as produced by `amd-smi static --ampp --json`).\n\tExample: --ampp-configure @profiles.json"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3240
+msgid "Set NPM balancing mode: POWER_BALANCING or FREQUENCY_BALANCING.\n\tThis is a system-wide setting, not per-GPU."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3255
+#, python-brace-format
+msgid "Set the node-level (NPM) power limit in watts.\n\tThis is a node-wide setting, not per-GPU.\n\tMax node power limit: {max_node_power_limit}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3269
+msgid "Configure Power Stabilization (HAWK dummy-compute insertion and Ramp Management).\n\tAccepts one or more space/comma-separated KEY=VALUE pairs (enable, power_floor, delay, insertion_priority, ramp_enable, ramp_max_ramp_up_rate, ramp_max_ramp_down_rate, ramp_min_time_at_power_floor, ramp_stop_delay), or a single @<path> argument pointing to a JSON file matching the `static --power-stabilization --json` output.\n\tenable/ramp_enable accept on/off/true/false/1/0; insertion_priority accepts a name (OPPORTUNISTIC, GUARANTEED, DYNAMIC) or its integer value; the rest, including ramp_max_ramp_up_rate/ramp_max_ramp_down_rate, are integers.\n\tExample: enable=on power_floor=70 insertion_priority=GUARANTEED ramp_max_ramp_up_rate=5\n\tEach key is applied in order; processing stops at the first failure."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3538
+msgid "Reset options for devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3539
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, will select all GPUs on the system.                                \nA reset argument must be provided; Multiple reset arguments are accepted.                                \nRequires 'sudo' privileges."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3542
+msgid "Reset Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3545
+msgid "Reset the specified GPU"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3546
+msgid "Reset clocks and overdrive to default"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3547
+msgid "Reset fans to automatic (driver) control"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3548
+msgid "Reset power profile back to default"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3549
+msgid "Reset XGMI error counts"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3550
+msgid "Disable performance determinism"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3551
+msgid "Reset the PPT0 and PPT1 power capacity limit to max capable"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3552
+msgid "Clean up local data in LDS/GPRs on a per partition basis"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3595
+msgid "Reset GTT (shared GPU memory) to system default"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3627
+msgid "Monitor metrics for target devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3628
+#, python-brace-format
+msgid "{description}\n\nMonitor a target device for the specified arguments.                                  \nIf no arguments are provided, all arguments will be enabled.                                  \nUse the watch arguments to run continuously."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3631
+msgid "Monitor Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3634
+msgid "Monitor power usage and power cap in Watts"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3635
+msgid "Monitor temperature in Celsius"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3636
+msgid "Monitor base board temperatures in Celsius"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3637
+msgid "Monitor GPU board temperatures in Celsius"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3638
+msgid "Monitor graphics utilization (%%) and clock (MHz)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3639
+msgid "Monitor memory utilization (%%) and clock (MHz)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3640
+msgid "Monitor encoder utilization (%%) and clock (MHz)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3641
+msgid "Monitor decoder utilization (%%) and clock (MHz)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3642
+msgid "Monitor ECC single bit, ECC double bit, and PCIe replay error counts"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3643
+msgid "Monitor memory usage in MB"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3644
+msgid "Monitor PCIe bandwidth in Mb/s"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3645
+msgid "Enable Process information table below monitor output;\n    Process Name may require elevated permissions"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3648
+msgid "Monitor power and thermal violation status (%%);\n    Only available for MI300 or newer ASICs"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3714
+msgid "Group process output by PID instead of GPU. Only applies when --process is used."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3730
+msgid "Displays xgmi information of the devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3731
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns information for all GPUs on the system.                                \nIf no xgmi argument is provided, all xgmi information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3734
+msgid "XGMI arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3737
+msgid "Metric XGMI information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3738
+msgid "Source GPU XGMI Link information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3739
+msgid "XGMI Link Status information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3774
+msgid "Displays partition information of the devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3775
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns information for all GPUs on the system.                                \nIf no partition argument is provided, all partition information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3778
+msgid "Partition arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3781
+msgid "display the current partition information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3782
+msgid "display the current memory partition mode and capabilities"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3783
+msgid "display accelerator partition information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3818
+msgid "Retrieve RAS (CPER) entries from the driver"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3819
+#, python-brace-format
+msgid "{description}\n\nRetrieve and decode RAS (CPER) entries from the kernel driver.\nSupports filtering by severity, exporting to different formats, and continuous monitoring.\nThis command accepts options only; no positional arguments are required."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3822
+msgid "RAS arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3825
+msgid "Trigger current CPER data retrieval"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3826
+msgid "Generate an AFID (AMD Field ID) given a CPER record file or folder"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3829
+#, python-brace-format
+msgid "Set the SEVERITY filters from the following:\n    {severity_choices_str}"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3832
+msgid "With --cper: folder to dump current CPER report files (created if missing).\n    With --afid: existing folder of CPER records to decode."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3836
+msgid "Maximum number of current CPER files in target folder\n    Older files beyond limit will be deleted"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3839
+msgid "Full path of a retrieved CPER record file to generate the AFID"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3840
+msgid "Continuously monitor for new CPER entries"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3853
+msgid "CPER Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3870
+msgid "AFID Arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3888
+msgid "Gets power and baseboard information for the node"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3889
+#, python-brace-format
+msgid "{description}\n\nReturns information for node 0 (OAM_ID 0) on the system.                                \nIf no node argument is provided, all node information except CUIDs will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3892
+msgid "Node arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3895
+msgid "Displays power management information"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3896
+msgid "Displays baseboard temperatures"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3897
+msgid "Displays GTT (shared GPU memory) size"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3898
+msgid "Displays compute tray type and accelerator count"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3899
+msgid "Lists the CUID of every component on the node: the platform, CPU\npackages, GPUs, NPUs and NICs. Every CUID is temporary."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3942
+msgid "Displays fabric (UALoE/UALink over Ethernet) information of the devices"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3943
+#, python-brace-format
+msgid "{description}\n\nIf no GPU is specified, returns information for all GPUs on the system.                                \nIf no fabric argument is provided, all fabric information will be displayed."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3946
+msgid "Fabric arguments"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3949
+msgid "Display fabric device configuration (BDF, bandwidth, latency, vPoD/pPoD, accelerator state)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3952
+msgid "Display fabric telemetry data (counters per category, instance, and item)"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:3972
+msgid "amd-smi fabric: warning: --topology now reports fabric device configuration; the counters it previously reported moved to --telemetry"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:474 amdsmi_cli/amdsmi_parser.py:1530
+#, python-brace-format
+msgid "Profile name cannot be empty or exceed {AMDSMI_MAX_STRING_LENGTH} bytes."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:511 amdsmi_cli/amdsmi_parser.py:518
+#: amdsmi_cli/amdsmi_parser.py:561
+#, python-brace-format
+msgid "Valid options are: {join}."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:569
+#, python-brace-format
+msgid "\n--clk-level requires at least one performance level index (e.g. --clk-level {clk_type} 0 1)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:643
+msgid "Missing MODE argument"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:650
+#, python-brace-format
+msgid "Invalid MODE {mode}, must be 0-5"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:674
+#, python-brace-format
+msgid "Mode {mode} requires MODE UTIL PPT_LIMIT for CPU family 0x{cpu_family:X} model 0x{cpu_model:X} (got {num_values} args)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:689
+#, python-brace-format
+msgid "UTIL must be 0-100, got {util}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:700
+msgid "PPT_LIMIT Out of range"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:707
+#, python-brace-format
+msgid "Mode {mode} requires only MODE argument for this CPU (got {num_values} args). UTIL and PPT_LIMIT not supported."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:719
+#, python-brace-format
+msgid "Mode {mode} requires only MODE argument (got {num_values} args)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:742
+msgid "Missing TYPE argument"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:751
+#, python-brace-format
+msgid "Invalid TYPE {rail_type}, must be 0 (HottestRail) or 1 (IndividualRail)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:763
+#, python-brace-format
+msgid "TYPE 0 (HottestRail) requires exactly 1 argument (TYPE only), got {num_values} arguments: {values}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:775
+#, python-brace-format
+msgid "TYPE 1 (IndividualRail) requires exactly 2 arguments (TYPE RAIL_INDEX), got {num_values} arguments: {values}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:788
+#, python-brace-format
+msgid "Invalid RAIL_INDEX {rail_index}, must be 0-4 (0=VDDCR_CPU0, 1=VDDCR_CPU1, 2=VDDCR_SOC, 3=VDDIO, 4=VDDIO_MEM_S3)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/amdsmi_parser.py:865
+#, python-brace-format
+msgid "File '{path}' exists and stdin is not a TTY; cannot prompt to overwrite or append. Re-run with --overwrite or --append."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:895
+msgid "User declined to overwrite or append existing file."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:921
+#, python-brace-format
+msgid "CPER file could not be read. Make sure the path '{path}' is correct."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:927
+#, python-brace-format
+msgid "Invalid Path: {path} is a directory when it needs to be a specific file."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:934
+#, python-brace-format
+msgid "Invalid Path: {path} Input file is empty."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_parser.py:939
+#, python-brace-format
+msgid "Invalid Path: {path} Could not determine if the value given is a valid path."
+msgstr ""
+
+#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1015
+msgid "ERROR: Could not import amdsmi module"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1016
+msgid "Install with: pip install amdsmi"
+msgstr ""
+
+#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1021
+msgid "Unable to detect amdgpu driver. Exiting..."
 msgstr ""
 
 #: amdsmi_cli/amdsmi_rocm_smi_compat.py:162
@@ -2592,80 +2061,245 @@ msgstr ""
 msgid "NOT_SUPPORTED: Cannot print JSON/CSV output for concise output"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1015
-msgid "ERROR: Could not import amdsmi module"
+#: amdsmi_cli/subcommands/event.py:42
+msgid "EVENT LISTENING:\n"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1016
-msgid "Install with: pip install amdsmi"
+#: amdsmi_cli/subcommands/event.py:43
+msgid "Press q and hit ENTER when you want to stop."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1021
-msgid "Unable to detect amdgpu driver. Exiting..."
+#: amdsmi_cli/subcommands/event.py:66
+msgid "Escape Sequence Detected; Exiting"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1026 amdsmi_cli/amdsmi_commands.py:243
-msgid "Failed to initialize AMD SMI"
+#: amdsmi_cli/subcommands/event.py:89
+msgid "No GPUs on machine"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1034 amdsmi_cli/amdsmi_commands.py:251
-msgid "No AMD GPU devices found"
+#: amdsmi_cli/subcommands/metric.py:3528
+msgid "No sensors found for this NIC"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_rocm_smi_compat.py:1045 amdsmi_cli/amdsmi_commands.py:258
-msgid ""
-"\n"
-"WARNING: AMD GPU device(s) is/are in a low-power state. Check power control/"
-"runtime_status\n"
+#: amdsmi_cli/subcommands/metric.py:3609
+msgid "No ports found for this NIC"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_commands.py:120
-msgid ""
-"Unable to get devices, driver not initialized (amdgpu not found in modules)"
+#: amdsmi_cli/subcommands/metric.py:3625
+msgid "No RDMA ports found for this NIC"
 msgstr ""
 
-#: amdsmi_cli/amdsmi_commands.py:130
-msgid ""
-"Unable to detect any GPU devices, check amdgpu version and module status "
-"(sudo modprobe amdgpu)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:145
-msgid "Unable to get devices, NIC driver not initialized"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:173 amdsmi_cli/amdsmi_commands.py:199
-msgid ""
-"Unable to detect any CPU devices, check amd_hsmp (or) hsmp_acpi version and "
-"module status (sudo modprobe amd_hsmp (or) sudo modprobe hsmp_acpi)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:189
-msgid ""
-"Unable to get CORE devices, amd_hsmp driver not loaded (sudo modprobe "
-"amd_hsmp)"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:214
-msgid "Not applicable to linux baremetal"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:273
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:100
 #, python-brace-format
-msgid "Could not import ROCm-SMI compatibility module: {e}"
+msgid "Folder '{folder}' is a symlink; refusing to write CPER files into it."
 msgstr ""
 
-#: amdsmi_cli/amdsmi_commands.py:274
-msgid "Make sure amdsmi_rocm_smi_compat.py is in the amdsmi_cli directory"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:275
-msgid "ERROR: ROCm-SMI compatibility mode not available"
-msgstr ""
-
-#: amdsmi_cli/amdsmi_commands.py:277
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:110
 #, python-brace-format
-msgid "Error in ROCm-SMI compatibility mode: {e}"
+msgid "Unable to create or access folder '{folder}': {e}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:128
+#, python-brace-format
+msgid "Folder '{folder}' contains no '.cper' files. '--afid --folder' requires a folder of pre-existing CPER records."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:224
+#, python-brace-format
+msgid "Unable to read CPER file '{cper_file}': {e}"
+msgstr ""
+
+#: amdsmi_cli/subcommands/ras.py:302
+msgid "Press CTRL + C to stop."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:73
+#, python-brace-format
+msgid "Command '{command}' requires exactly one of '--cper-file' or '--folder'. Run '--help' for more info."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:84
+#, python-brace-format
+msgid "Folder '{folder}' is a symlink; refusing to follow it for '--afid --folder'."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/ras.py:90
+#, python-brace-format
+msgid "Folder '{folder}' does not exist or is not a directory. '--afid --folder' requires a folder of pre-existing CPER records."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/reset.py:91
+msgid "amd-smi reset: error: argument --gtt: not allowed with argument --gpu/-g (--gtt is a system-wide setting, not per-GPU)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:1004
+#, python-brace-format
+msgid "'{file_path}' has no {label} data for GPU {gpu_id} (BDF:{gpu_bdf})."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:1214
+#, python-brace-format
+msgid "'{file_path}': {e}"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:1599
+#, python-brace-format
+msgid "\nPerformance Level Options:\n\t{perf_options}\n"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:1678
+#, python-brace-format
+msgid "\nAvailable Power Profiles:\n\t{available_str}\n"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:1857
+#, python-brace-format
+msgid "Valid Memory partition Modes: {caps}\n"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:1898
+#, python-brace-format
+msgid "Valid SOC P-State Policies: [{policy_string}]\n"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:1940
+#, python-brace-format
+msgid "Valid XGMI PLPD Policies: [{policy_string}]\n"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:2224
+msgid "Valid clock types are: sclk, mclk, fclk\n"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:2411
+msgid "VRAM carveout can only be set for a single GPU. Please specify --gpu <id>"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:2521
+#, python-brace-format
+msgid "\nValid AMPP Profiles: [{available_str}]\n"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:2570
+#, python-brace-format
+msgid "\nWritable AMPP Profiles: [{available_str}]\n"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:2758
+msgid "amd-smi set: error: argument --gtt/-G: not allowed with argument --gpu/-g (--gtt is a system-wide setting, not per-GPU)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:2792
+msgid "amd-smi set: error: argument --node-balancing-mode: not allowed with argument --gpu/-g (--node-balancing-mode is a system-wide setting, not per-GPU)"
+msgstr ""
+
+#: amdsmi_cli/subcommands/set_value.py:2810
+msgid "amd-smi set: error: argument --node-power-limit/-n: not allowed with argument --gpu/-g (--node-power-limit is a node-wide setting, not per-GPU)"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:2994
+msgid "Cannot set GPU, CPU, and CORE arguments at the same time"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:3001
+msgid "Cannot set GPU, CPU, or CORE arguments at the same time"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:902
+#: amdsmi_cli/subcommands/set_value.py:926
+#, python-brace-format
+msgid "Unable to read '{file_path}': {e}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:910
+#, python-brace-format
+msgid "'{file_path}' is not a regular file."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:935
+#, python-brace-format
+msgid "'{file_path}' exceeds the {limit}-byte limit for a replay file."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:948
+#, python-brace-format
+msgid "'{file_path}' is not valid UTF-8: {e}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:957
+#, python-brace-format
+msgid "'{file_path}' is not valid JSON: {e}"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:964
+#, python-brace-format
+msgid "'{file_path}' is not an 'amd-smi static --{cli_flag} --json' shaped file (expected a top-level 'gpu_data' list)."
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/set_value.py:988
+#, python-brace-format
+msgid "'{file_path}' has no entry for GPU {gpu_id} (BDF:{gpu_bdf}). Found gpu ids: {value}"
+msgstr ""
+
+#: amdsmi_cli/subcommands/static.py:1305
+msgid "N/A (Power Stabilization is not supported on this ASIC/platform)"
+msgstr ""
+
+#: amdsmi_cli/subcommands/version.py:137 amdsmi_cli/subcommands/version.py:144
+#: amdsmi_cli/subcommands/version.py:147
+msgid "not loaded"
+msgstr ""
+
+#. Python argparse help layout string.
+#: python:argparse
+msgid "usage: "
+msgstr ""
+
+#. Python argparse help layout string.
+#: python:argparse
+msgid "options"
+msgstr ""
+
+#. Python argparse help layout string.
+#: python:argparse
+msgid "optional arguments"
+msgstr ""
+
+#. Python argparse help layout string.
+#: python:argparse
+msgid "positional arguments"
+msgstr ""
+
+#. Python argparse help layout string.
+#: python:argparse
+msgid "show this help message and exit"
+msgstr ""
+
+#. Python argparse help layout string.
+#: python:argparse
+msgid "show program's version number and exit"
 msgstr ""
 
 #. Human-readable output label for JSON key(s): accel_state. Only the screen label is translated; JSON/CSV keys stay English.
@@ -7369,60 +7003,23 @@ msgctxt "label"
 msgid "port_num"
 msgstr ""
 
-#: amdsmi_cli/subcommands/list_devices.py:262
+#. Human-readable output label for JSON key(s): temporary. Only the screen label is translated; JSON/CSV keys stay English.
+#: amdsmi_cli/amdsmi_helpers.py:480 amdsmi_cli/subcommands/list_devices.py:143
+#: amdsmi_cli/subcommands/node.py:30
+msgctxt "label"
+msgid "TEMPORARY"
+msgstr ""
+
+#. Human-readable output label for JSON key(s): package. Only the screen label is translated; JSON/CSV keys stay English.
+#: amdsmi_cli/subcommands/static.py:722
+msgctxt "label"
+msgid "PACKAGE"
+msgstr ""
+
+#. Error message (human-readable output only; JSON/CSV keep English).
+#: amdsmi_cli/subcommands/list_devices.py:23
 msgid ""
 "Note: PRODUCT_NAME, PART_NUMBER and SERIAL_NUMBER are read from PCI VPD, "
 "which only root can read. An N/A field is either suppressed by permissions "
 "or absent from the device; re-run with sudo to tell the two apart."
-msgstr ""
-
-#: amdsmi_cli/subcommands/metric.py:3528
-msgid "No sensors found for this NIC"
-msgstr ""
-
-#: amdsmi_cli/subcommands/metric.py:3609
-msgid "No ports found for this NIC"
-msgstr ""
-
-#: amdsmi_cli/subcommands/metric.py:3625
-msgid "No RDMA ports found for this NIC"
-msgstr ""
-
-#: amdsmi_cli/subcommands/static.py:1308
-msgid "N/A (Power Stabilization is not supported on this ASIC/platform)"
-msgstr ""
-
-#: amdsmi_cli/subcommands/version.py:134 amdsmi_cli/subcommands/version.py:137
-#: amdsmi_cli/subcommands/version.py:140
-msgid "not loaded"
-msgstr ""
-
-#. Python argparse help layout string.
-#: python:argparse
-msgid "usage: "
-msgstr ""
-
-#. Python argparse help layout string.
-#: python:argparse
-msgid "options"
-msgstr ""
-
-#. Python argparse help layout string.
-#: python:argparse
-msgid "optional arguments"
-msgstr ""
-
-#. Python argparse help layout string.
-#: python:argparse
-msgid "positional arguments"
-msgstr ""
-
-#. Python argparse help layout string.
-#: python:argparse
-msgid "show this help message and exit"
-msgstr ""
-
-#. Python argparse help layout string.
-#: python:argparse
-msgid "show program's version number and exit"
 msgstr ""
